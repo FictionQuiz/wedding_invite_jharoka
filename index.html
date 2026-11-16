@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Italianno&family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--forest:#102b24;--forest2:#193b31;--deep:#091b17;--gold:#b9975b;--gold2:#e7d4a5;--ivory:#f5f0e5;--paper:#fbf8f0;--ink:#24352e;--muted:#77796c}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Manrope,Arial,sans-serif}button{font:inherit}a{color:inherit}
@@ -82,6 +82,63 @@
 @media(max-width:600px){.portrait-grid{gap:12px}.portrait-card{padding:6px}.portrait-card img{height:245px}.portrait-card figcaption span{font-size:21px}.music-toggle{right:12px;bottom:12px;padding:11px 13px}}
 
 .portrait-card img,.couple-frame img{background:linear-gradient(145deg,#17392f,#b9975b);color:#fff4dc}
+
+/* HOORIQA premium Mughal jharokha + mobile refinement */
+.names,.seal-names{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:500;letter-spacing:-.045em;text-shadow:0 5px 25px #0009}
+.names{font-size:clamp(55px,10vw,82px);line-height:1.02}
+.seal-names{font-size:clamp(48px,10vw,62px);letter-spacing:-.035em}
+.scroll-title{font-family:"Bodoni Moda",serif;font-style:italic;font-size:31px;letter-spacing:-.035em}
+.signature,.couple-caption{font-family:"Italianno",cursive;font-size:49px}
+.arch{height:540px;width:min(460px,90vw);padding:13px;clip-path:none;border-radius:48% 48% 5px 5px / 24% 24% 5px 5px;background:linear-gradient(135deg,#f5e4b7 0%,#a77c3d 18%,#f0d99f 34%,#79562d 52%,#e6ce91 72%,#9b7138 100%);box-shadow:0 28px 65px #0009,0 0 0 1px #f1dca7}
+.arch:before{inset:7px;border:1px solid #fff0c7;border-radius:48% 48% 2px 2px / 24% 24% 2px 2px;clip-path:none;outline:1px solid #b58a4b;outline-offset:5px}
+.arch:after{content:"❧  ✧  ❧";position:absolute;z-index:4;top:18px;left:0;right:0;text-align:center;color:#f7e5b8;font-size:22px;letter-spacing:.24em;text-shadow:0 2px 10px #2c1608}
+.arch-inner{clip-path:none;border:1px solid #f3dfb1;border-radius:47% 47% 2px 2px / 23% 23% 2px 2px;background:linear-gradient(180deg,#071b1640,#071b1699),url('https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-banquet-hall-islamabad-1024x682.jpeg') center/cover}
+.arch-inner:before{inset:17px;border:1px solid #e7d4a5aa;border-radius:46% 46% 0 0 / 23% 23% 0 0;box-shadow:inset 0 0 0 5px #b9975b33,0 0 25px #0005}
+.arch-ornament{margin:38px 0 22px;font-size:27px;text-shadow:0 0 18px #e7d4a5}
+.family{letter-spacing:.2em;text-shadow:0 2px 8px #000}
+.hero:before{inset:12px;border:1px solid #e8d29b;box-shadow:inset 0 0 0 5px #071b1722}
+.hero:after{inset:19px;border:1px solid #e8d29b55}
+.portrait-grid{gap:20px}
+.portrait-card{border:1px solid #b9975b;box-shadow:0 22px 50px #102b2424}
+.portrait-card figcaption span{font-family:"Bodoni Moda",serif;font-style:italic;font-size:29px}
+.portrait-card figcaption small{letter-spacing:.16em}
+.couple-frame{border:1px solid #b9975b;box-shadow:0 24px 65px #102b2430}
+.detail{background:linear-gradient(180deg,#fffdf8,#f7f0e2);box-shadow:0 8px 25px #102b2409}
+.map-button{opacity:1;cursor:pointer}
+@media(max-width:600px){
+ .hero{min-height:100svh;padding:64px 14px 48px}
+ .hero-content{max-width:100%}
+ .arch{height:min(455px,118vw);width:min(350px,91vw);margin:24px auto 20px;padding:9px}
+ .arch:after{top:13px;font-size:17px}
+ .arch-ornament{margin:30px 0 15px;font-size:21px}
+ .names{font-size:clamp(49px,14vw,68px);line-height:1}
+ .amp{font-size:24px;margin:8px 0}
+ .family{font-size:8px}
+ .hero-line{font-size:21px;line-height:1.3}
+ .hero-date{font-size:9px;letter-spacing:.14em;line-height:1.8}
+ .section{padding:66px 16px}
+ .heading{font-size:clamp(42px,12vw,58px)}
+ .body-copy{font-size:21px;line-height:1.45}
+ .portrait-grid{grid-template-columns:1fr;max-width:390px;gap:16px}
+ .portrait-card img{height:auto;aspect-ratio:4/5;object-fit:cover}
+ .couple-frame img{aspect-ratio:4/5;max-height:520px;object-fit:cover}
+ .couple-caption{font-size:43px}
+ .save-card{padding:30px 14px}
+ .date-big{font-size:58px}
+ .countdown{gap:6px}
+ .timebox{min-width:calc(25% - 6px);padding:11px 4px}
+ .timebox strong{font-size:22px}
+ .detail-grid{grid-template-columns:1fr;gap:10px}
+ .detail{padding:18px 12px}
+ .venue-panel{padding:22px 15px}
+ .venue-name{font-size:27px}
+ .venue-address{font-size:18px}
+ .music-toggle{right:12px;bottom:12px;padding:10px 12px;font-size:8px}
+ .seal{width:min(350px,88vw);min-height:440px}
+ .seal-inner{min-height:402px;padding:26px 15px}
+}
+@media(min-width:601px) and (max-width:900px){.arch{height:500px;width:min(410px,86vw)}.portrait-card img{height:320px}}
+
 </style>
 </head>
 <body>
@@ -106,7 +163,7 @@
  <div class="scratch-box"><div class="scratch-copy">04 January 2027<small>Monday · 8:00 PM · Islamabad</small></div><canvas id="scratch"></canvas></div><div class="hint">Gently scratch the gold to reveal the date</div>
  <div class="reveal-modal" id="revealModal" aria-hidden="true"><div class="glitter-layer" id="glitterLayer"></div><div class="reveal-dialog"><div class="reveal-star">✧</div><div class="reveal-kicker">The day is revealed</div><div class="reveal-date">04 January 2027</div><div class="reveal-place">Monday · Islamabad · 8:00 PM</div><button class="modal-close" id="closeReveal">Continue</button></div></div>
  </div></div></section>
-<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional South Asian wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="https://images.unsplash.com/photo-1677691257363-eebd2abeafec?auto=format&fit=crop&w=900&q=85" alt="Illustrative South Asian bridal portrait" loading="lazy"><figcaption><span>The Bride</span><small>Bridal inspiration</small></figcaption></figure><figure class="portrait-card"><img src="https://dvikaphotography.com/assets/indian-groom-portrait-CBvTUThq.png" alt="Illustrative South Asian groom portrait in ivory sherwani" loading="lazy"><figcaption><span>The Groom</span><small>Groom inspiration</small></figcaption></figure></div><div class="couple-frame"><img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?auto=format&fit=crop&w=1200&q=85" alt="Illustrative traditional South Asian wedding couple portrait" loading="lazy"><div class="couple-caption">Areeqa <i>&amp;</i> Muneeb</div></div><p class="portrait-note">Illustrative wedding imagery · Personal portraits can replace these visuals.</p></div></section>
+<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional South Asian wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?auto=format&fit=crop&w=1400&q=90" alt="Bride in a traditional South Asian wedding portrait" style="object-position:28% center" loading="lazy"><figcaption><span>The Bride</span><small>Bridal portrait</small></figcaption></figure><figure class="portrait-card"><img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?auto=format&fit=crop&w=1400&q=90" alt="Groom in a traditional South Asian wedding portrait" style="object-position:72% center" loading="lazy"><figcaption><span>The Groom</span><small>Groom portrait</small></figcaption></figure></div><div class="couple-frame"><img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?auto=format&fit=crop&w=1400&q=90" alt="Bride and groom together in one wedding portrait" loading="lazy"><div class="couple-caption">Areeqa <i>&amp;</i> Muneeb</div></div><p class="portrait-note">One matching couple portrait is used across all three frames. Upload Areeqa and Muneeb’s own photo for an exact personal match.</p></div></section>
 <section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-marquee-islamabad-wedding-hall-1024x647.jpeg" alt="Majestic Marquee Islamabad wedding hall and stage" loading="lazy"></div><div class="photo-credit">Venue photograph · Majestic Marquee Islamabad</div></div></section>
 <section class="section details"><div class="wrap reveal"><div class="kicker">The celebration</div><h2 class="heading">The wedding day</h2><p class="body-copy">We would be honoured by your presence.</p><div class="detail-grid"><div class="detail"><small>Date</small><strong>04 January 2027</strong><p>Monday</p></div><div class="detail"><small>Time</small><strong>8:00 PM</strong><p>Evening celebration</p></div><div class="detail"><small>Occasion</small><strong>Wedding</strong><p>A celebration with family and friends</p></div></div></div></section>
 <section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
