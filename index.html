@@ -62,6 +62,24 @@
 @keyframes starPulse{50%{transform:scale(1.18);text-shadow:0 0 32px #d9b66b}}
 @media(max-width:600px){.section{padding:75px 18px}.arch{height:425px}.detail-grid{grid-template-columns:1fr}.detail{padding:19px 10px}.seal{min-height:490px}.seal-inner{min-height:452px}.hero{padding:75px 18px}.date-big{font-size:55px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.portraits{background:#f7f1e5}
+.portrait-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:760px;margin:36px auto 24px}
+.portrait-card{margin:0;position:relative;padding:9px;background:#fffaf0;border:1px solid #b9975b;box-shadow:0 18px 42px #102b2418}
+.portrait-card img{display:block;width:100%;height:390px;object-fit:cover;object-position:center top}
+.portrait-card figcaption{padding:15px 8px 10px;display:flex;flex-direction:column;gap:5px}
+.portrait-card figcaption span{font:27px "Playfair Display",serif;color:#17392f}
+.portrait-card figcaption small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#947443}
+.couple-frame{max-width:760px;margin:26px auto 0;padding:10px;border:1px solid #b9975b;background:#fffaf0;position:relative;box-shadow:0 22px 55px #102b2418}
+.couple-frame img{width:100%;display:block;max-height:510px;aspect-ratio:16/9;object-fit:cover;object-position:center 38%}
+.couple-caption{padding:16px 8px 8px;font:36px "Great Vibes",cursive;color:#17392f}
+.couple-caption i{font:italic 20px "Cormorant Garamond",serif;color:#a17d47}
+.portrait-note{font-size:9px;letter-spacing:.08em;color:#88795f;margin-top:18px}
+.music-toggle{position:fixed;right:20px;bottom:20px;z-index:80;display:flex;align-items:center;gap:10px;border:1px solid #d9bf85;background:#102b24ed;color:#f7e8c4;padding:12px 16px;box-shadow:0 10px 30px #0003;cursor:pointer;border-radius:40px;font-size:9px;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.music-toggle .music-icon{font-size:17px;color:#e7d4a5}
+.music-toggle[aria-pressed="true"]{background:#b9975b;color:#102b24}
+.music-toggle[aria-pressed="true"] .music-icon{color:#102b24}
+@media(max-width:600px){.portrait-grid{gap:12px}.portrait-card{padding:6px}.portrait-card img{height:245px}.portrait-card figcaption span{font-size:21px}.music-toggle{right:12px;bottom:12px;padding:11px 13px}}
 </style>
 </head>
 <body>
@@ -71,6 +89,7 @@
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <main>
+<button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Play background music"><span class="music-icon" id="musicIcon">♫</span><span id="musicLabel">Play Music</span></button>
 <header class="hero">
  <div class="hero-content"><div class="hero-kicker">With the blessings of Allah and our families</div>
   <div class="arch"><div class="arch-inner"><div class="arch-ornament">✧ ❧ ✧</div><div class="family">Together with their families</div><div class="names">Areeqa</div><div class="amp">&amp;</div><div class="names">Muneeb</div></div></div>
@@ -85,6 +104,7 @@
  <div class="scratch-box"><div class="scratch-copy">04 January 2027<small>Monday · 8:00 PM · Islamabad</small></div><canvas id="scratch"></canvas></div><div class="hint">Gently scratch the gold to reveal the date</div>
  <div class="reveal-modal" id="revealModal" aria-hidden="true"><div class="glitter-layer" id="glitterLayer"></div><div class="reveal-dialog"><div class="reveal-star">✧</div><div class="reveal-kicker">The day is revealed</div><div class="reveal-date">04 January 2027</div><div class="reveal-place">Monday · Islamabad · 8:00 PM</div><button class="modal-close" id="closeReveal">Continue</button></div></div>
  </div></div></section>
+<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional South Asian wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="https://images.unsplash.com/photo-1677691257363-eebd2abeafec?auto=format&fit=crop&w=900&q=85" alt="Illustrative South Asian bridal portrait" loading="lazy"><figcaption><span>The Bride</span><small>Bridal inspiration</small></figcaption></figure><figure class="portrait-card"><img src="https://dvikaphotography.com/assets/indian-groom-portrait-CBvTUThq.png" alt="Illustrative South Asian groom portrait in ivory sherwani" loading="lazy"><figcaption><span>The Groom</span><small>Groom inspiration</small></figcaption></figure></div><div class="couple-frame"><img src="https://images.unsplash.com/photo-1665960213530-3fb10da1f25e?auto=format&fit=crop&w=1200&q=85" alt="Illustrative traditional South Asian wedding couple portrait" loading="lazy"><div class="couple-caption">Areeqa <i>&amp;</i> Muneeb</div></div><p class="portrait-note">Illustrative wedding imagery · Personal portraits can replace these visuals.</p></div></section>
 <section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-marquee-islamabad-wedding-hall-1024x647.jpeg" alt="Majestic Marquee Islamabad wedding hall and stage" loading="lazy"></div><div class="photo-credit">Venue photograph · Majestic Marquee Islamabad</div></div></section>
 <section class="section details"><div class="wrap reveal"><div class="kicker">The celebration</div><h2 class="heading">The wedding day</h2><p class="body-copy">We would be honoured by your presence.</p><div class="detail-grid"><div class="detail"><small>Date</small><strong>04 January 2027</strong><p>Monday</p></div><div class="detail"><small>Time</small><strong>8:00 PM</strong><p>Evening celebration</p></div><div class="detail"><small>Occasion</small><strong>Wedding</strong><p>A celebration with family and friends</p></div></div></div></section>
 <section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
@@ -140,7 +160,33 @@
  closeModal.addEventListener('click',()=>{modal.classList.remove('show');modal.setAttribute('aria-hidden','true');});
  modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');}});
  paint();window.addEventListener('resize',()=>{if(!revealed)paint();});
- const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+ const musicButton=document.getElementById('musicToggle'),musicLabel=document.getElementById('musicLabel'),musicIcon=document.getElementById('musicIcon');
+ let audioContext=null,musicTimer=null,musicOn=false,noteIndex=0;
+ const melody=[440,493.88,587.33,659.25,587.33,493.88,392,440];
+ function playNote(freq,when,duration,volume){
+  const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+  osc.type='sine';osc.frequency.setValueAtTime(freq,when);
+  gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(volume,when+.08);gain.gain.exponentialRampToValueAtTime(.0001,when+duration);
+  osc.connect(gain);gain.connect(audioContext.destination);osc.start(when);osc.stop(when+duration+.03);
+ }
+ function musicStep(){
+  if(!musicOn||!audioContext)return;
+  const now=audioContext.currentTime;
+  playNote(melody[noteIndex%melody.length],now,1.25,.035);
+  if(noteIndex%4===0)playNote(220,now,2.7,.012);
+  if(noteIndex%2===0)playNote(melody[(noteIndex+2)%melody.length]*2,now+.08,.7,.009);
+  noteIndex++;
+ }
+ async function toggleMusic(){
+  if(!audioContext){const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!AudioCtx){musicLabel.textContent='Music unavailable';return;}audioContext=new AudioCtx();}
+  if(audioContext.state==='suspended')await audioContext.resume();
+  musicOn=!musicOn;
+  if(musicOn){musicStep();musicTimer=window.setInterval(musicStep,1050);musicLabel.textContent='Mute Music';musicIcon.textContent='♫';musicButton.setAttribute('aria-pressed','true');}
+  else{clearInterval(musicTimer);musicTimer=null;musicLabel.textContent='Play Music';musicIcon.textContent='♪';musicButton.setAttribute('aria-pressed','false');}
+ }
+ musicButton.addEventListener('click',toggleMusic);
+\n const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 })();
 </script>
 </body></html>
