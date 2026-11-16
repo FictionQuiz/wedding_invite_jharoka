@@ -98,7 +98,7 @@
  function sparkle(){const symbols=['✦','✧','⋆','·'];for(let i=0;i<75;i++){const s=document.createElement('span');s.className='glitter';s.textContent=symbols[Math.floor(Math.random()*symbols.length)];s.style.left=Math.random()*100+'%';s.style.setProperty('--dur',(1.8+Math.random()*2.8)+'s');s.style.setProperty('--drift',((Math.random()-.5)*180)+'px');s.style.fontSize=(9+Math.random()*17)+'px';s.style.animationDelay=(Math.random()*.8)+'s';glitter.appendChild(s);setTimeout(()=>s.remove(),5200);}}
  function revealDate(){if(revealed)return;revealed=true;canvas.style.opacity='0';canvas.style.pointerEvents='none';modal.classList.add('show');modal.setAttribute('aria-hidden','false');sparkle();}
  canvas.addEventListener('pointerdown',e=>{down=true;canvas.setPointerCapture(e.pointerId);erase(e);});
- canvas.addEventListener('pointermove',e=>{erase(e);if(!revealed){const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;let clear=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]<40)clear++;if(clear>pixels.length*.34)revealDate();}});
+ canvas.addEventListener('pointermove',e=>{erase(e);if(!revealed){const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;let clear=0;for(let i=3;i<pixels.length;i+=4)if(pixels[i]<40)clear++;if(clear>pixels.length*.085)revealDate();}});
  ['pointerup','pointercancel','lostpointercapture'].forEach(ev=>canvas.addEventListener(ev,()=>down=false));
  closeModal.addEventListener('click',()=>{modal.classList.remove('show');modal.setAttribute('aria-hidden','true');});
  modal.addEventListener('click',e=>{if(e.target===modal){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');}});
