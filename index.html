@@ -152,11 +152,28 @@
 .story-frame img{object-fit:cover}
 .scroll-invite{z-index:4;box-shadow:0 24px 90px #000b,0 0 35px #e7d4a544}
 @media(max-width:600px){.door{background-size:100% 100%,200% 100%}.lantern{max-width:15vw}}
+
+/* Interactive knock-to-open invitation sequence */
+.door{appearance:none;-webkit-appearance:none;padding:0;cursor:pointer;outline:none}
+.door:focus-visible{outline:2px solid #f3dfb1;outline-offset:-8px}
+.knock-prompt{position:absolute;z-index:7;left:50%;top:50%;transform:translate(-50%,-50%);width:min(310px,78vw);padding:20px 18px;text-align:center;color:#f8edcf;background:linear-gradient(145deg,#102c24e8,#071812e8);border:1px solid #c8a76b;box-shadow:0 15px 55px #0008;pointer-events:auto;transition:opacity .7s,transform .7s}
+.knock-prompt strong,.knock-prompt small,.knock-hint{display:block}
+.knock-icon{display:block;font-size:25px;color:#ead4a0;margin-bottom:8px}
+.knock-prompt strong{font:italic 22px "Cormorant Garamond",serif;font-weight:500}
+.knock-prompt small{font:12px Manrope,sans-serif;color:#e1d1ad;margin-top:7px}
+.knock-hint{font:8px Manrope,sans-serif;letter-spacing:.23em;color:#d5b979;margin-top:13px}
+.knock-prompt.hide{opacity:0;transform:translate(-50%,-44%);pointer-events:none}
+.loader.knock-one .door-left,.loader.knock-one .door-right,.loader.knock-two .door-left,.loader.knock-two .door-right{animation:doorKnock .24s ease}
+@keyframes doorKnock{0%,100%{filter:brightness(1);transform:translateX(0)}35%{filter:brightness(1.35);transform:translateX(-3px)}70%{transform:translateX(2px)}}
+.lantern{animation-play-state:paused!important;opacity:0}
+.loader.floating .lantern{animation-play-state:running!important}
+.loader.opening .knock-prompt{opacity:0;pointer-events:none}
+@media(max-width:600px){.knock-prompt{width:min(285px,78vw);padding:16px 12px}.knock-prompt strong{font-size:20px}}
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <div class="door door-left"></div><div class="door door-right"></div>
+ <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div>
  <div class="scroll-invite"><div class="scroll-seal">A <span>&amp;</span> M</div><div class="scroll-title">Areeqa <i>&amp;</i> Muneeb</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
@@ -190,11 +207,29 @@
  window.addEventListener('pageshow',()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
  window.scrollTo({top:0,left:0,behavior:'instant'});
  document.body.style.overflow='hidden';
- window.setTimeout(()=>{loader.classList.add('opening');},900);
- window.setTimeout(()=>{loader.classList.add('card-reveal');},3500);
- window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},8200);
  const lanternLayer=loader;
- for(let i=0;i<18;i++){const light=document.createElement('i');light.className='lantern';light.setAttribute('aria-hidden','true');light.style.left=(3+Math.random()*94)+'%';light.style.width=(25+Math.random()*48)+'px';light.style.height=(38+Math.random()*68)+'px';light.style.animationDuration=(17+Math.random()*19)+'s';light.style.animationDelay=(-Math.random()*25)+'s';light.style.setProperty('--sway',(Math.random()*46-23)+'px');lanternLayer.appendChild(light);}
+ for(let i=0;i<22;i++){const light=document.createElement('i');light.className='lantern';light.setAttribute('aria-hidden','true');light.style.left=(2+Math.random()*96)+'%';light.style.width=(22+Math.random()*46)+'px';light.style.height=(34+Math.random()*66)+'px';light.style.animationDuration=(18+Math.random()*18)+'s';light.style.animationDelay=(Math.random()*2)+'s';light.style.setProperty('--sway',(Math.random()*58-29)+'px');lanternLayer.appendChild(light);}
+ const knockPrompt=document.getElementById('knockPrompt');
+ let knocks=0,knockReset=null,doorsOpened=false;
+ function knockDoor(){
+  if(doorsOpened)return;
+  knocks++;
+  loader.classList.remove('knock-one','knock-two');
+  loader.classList.add(knocks===1?'knock-one':'knock-two');
+  if(knockPrompt)knockPrompt.querySelector('small').textContent=knocks===1?'One more knock to open the doors':'The doors are opening…';
+  if(knockReset)clearTimeout(knockReset);
+  if(knocks>=2){
+   doorsOpened=true;loader.classList.add('opening');
+   if(knockPrompt)knockPrompt.classList.add('hide');
+   window.setTimeout(()=>loader.classList.add('floating'),1900);
+   window.setTimeout(()=>loader.classList.add('card-reveal'),5100);
+   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},9300);
+  }else{
+   knockReset=window.setTimeout(()=>{knocks=0;loader.classList.remove('knock-one','knock-two');if(knockPrompt)knockPrompt.querySelector('small').textContent='Tap the doors twice to knock';},2200);
+  }
+ }
+ loader.querySelectorAll('.door').forEach(door=>door.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();}));
+ if(knockPrompt)knockPrompt.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();});
  function tick(){const target=new Date('2027-01-04T00:00:00+05:00').getTime(),diff=target-Date.now(),el=document.getElementById('countdown');if(diff<=0){el.innerHTML='<div class="timebox"><strong>Today</strong><span>Celebration</span></div>';return;}const vals=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60],labels=['Days','Hours','Minutes','Seconds'];el.innerHTML=vals.map((v,i)=>'<div class="timebox"><strong>'+String(v).padStart(2,'0')+'</strong><span>'+labels[i]+'</span></div>').join('');}
  tick();setInterval(tick,1000);
  const canvas=document.getElementById('scratch'),ctx=canvas.getContext('2d',{willReadFrequently:true});
