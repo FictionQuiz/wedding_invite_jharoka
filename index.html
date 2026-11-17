@@ -709,8 +709,7 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
   const g=ctx.createLinearGradient(0,0,r.width,r.height);
   g.addColorStop(0,'#9a753c');g.addColorStop(.22,'#f3e2bb');g.addColorStop(.48,'#c19a5b');g.addColorStop(.72,'#f8e9c8');g.addColorStop(1,'#a98247');
   ctx.globalCompositeOperation='source-over';ctx.fillStyle=g;ctx.fillRect(0,0,r.width,r.height);
-  ctx.strokeStyle='#f8eacb';ctx.lineWidth=1;ctx.strokeRect(7,7,r.width-14,r.height-14);
-  ctx.fillStyle='#69512e';ctx.textAlign='center';ctx.font='10px Manrope';ctx.fillText('✧   RUB THE GOLD TO REVEAL   ✧',r.width/2,r.height/2+4);
+  // Clean gold coating only; the heart shape and instructions sit outside the canvas.
  }
  function point(e){const r=canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
  function scratchTo(p){
