@@ -16,7 +16,7 @@
 .loader{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:linear-gradient(180deg,#071b1780,#071b17a8),url("./jharokha.jpg.jpeg") center/cover no-repeat;color:var(--ivory);transition:opacity 1.5s ease,visibility 1.5s ease;overflow:hidden}.loader:before,.loader:after{display:none}.loader.done{opacity:0;visibility:hidden;pointer-events:none}
 .loader:before,.loader:after{content:"";position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(90deg,#07140f,#17392f 65%,#0c241d);z-index:2;transition:transform 3.35s cubic-bezier(.72,0,.16,1)}.loader:before{left:0;border-right:1px solid #b9975b66}.loader:after{right:0;border-left:1px solid #b9975b66}.loader.done:before{transform:translateX(-101%)}.loader.done:after{transform:translateX(101%)}
 .seal{position:relative;z-index:3;width:min(390px,86vw);min-height:510px;padding:18px;border:1px solid var(--gold);border-radius:220px 220px 4px 4px;box-shadow:0 20px 80px #0007;background:linear-gradient(145deg,#ffffff0d,transparent)}.seal:before{content:"";position:absolute;inset:9px;border:1px solid #b9975b66;border-radius:210px 210px 2px 2px}.seal-inner{min-height:472px;height:100%;border:1px solid #b9975b88;border-radius:205px 205px 2px 2px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px 20px;position:relative}.micro{font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2)}.seal-monogram{font:italic 43px "Playfair Display",serif;color:var(--gold2);margin:27px 0 12px}.seal-names{font:clamp(52px,12vw,70px) "Italianno",cursive;line-height:1.05;color:#fff4dc}.seal-caption{font:italic 21px "Cormorant Garamond",serif;color:#e4d7bd;margin:20px 0 30px}.enter{border:1px solid var(--gold2);background:linear-gradient(110deg,#a98448,#e5d1a0,#a98448);color:#142d25;padding:15px 27px;letter-spacing:.22em;font-size:9px;text-transform:uppercase;cursor:pointer;transition:transform .4s,box-shadow .4s}.enter:hover{transform:translateY(-3px);box-shadow:0 12px 30px #0005}
-.lantern{position:absolute;z-index:1;bottom:-100px;width:58px;height:82px;background:url("./lantern-1.png%20(2).jpg") center/contain no-repeat;filter:drop-shadow(0 0 14px #eac77e99);animation:rise 15s linear infinite;opacity:0}.lantern:before{display:none}.l1{left:9%;animation-delay:0s}.l2{left:27%;animation-delay:5s;transform:scale(.6)}.l3{right:18%;animation-delay:2s;transform:scale(.8)}.l4{right:7%;animation-delay:8s;transform:scale(.55)}@keyframes rise{0%{transform:translate3d(0,0,0) rotate(-3deg);bottom:-100px;opacity:0}12%{opacity:.88}50%{transform:translate3d(var(--sway,18px),-50vh,0) rotate(3deg)}100%{transform:translate3d(calc(var(--sway,18px)*-1),-120vh,0) rotate(-4deg);opacity:0}}
+.lantern{position:absolute;z-index:1;bottom:-100px;width:58px;height:82px;background:url("./lantern-1.png.png") center/contain no-repeat;filter:drop-shadow(0 0 14px #eac77e99);animation:rise 15s linear infinite;opacity:0}.lantern:before{display:none}.l1{left:9%;animation-delay:0s}.l2{left:27%;animation-delay:5s;transform:scale(.6)}.l3{right:18%;animation-delay:2s;transform:scale(.8)}.l4{right:7%;animation-delay:8s;transform:scale(.55)}@keyframes rise{0%{transform:translate3d(0,0,0) rotate(-3deg);bottom:-100px;opacity:0}12%{opacity:.88}50%{transform:translate3d(var(--sway,18px),-50vh,0) rotate(3deg)}100%{transform:translate3d(calc(var(--sway,18px)*-1),-120vh,0) rotate(-4deg);opacity:0}}
 .hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;color:#fff8e8;padding:100px 20px 80px;background:linear-gradient(180deg,#071c1766,#0a211b99),url("./jharokha.jpg.jpeg") center center/cover no-repeat}.hero:before{content:"";position:absolute;inset:14px;border:1px solid #d8bd82aa;pointer-events:none}.hero:after{content:"";position:absolute;inset:22px;border:1px solid #d8bd824d;pointer-events:none}.hero-content{width:min(780px,100%);position:relative;z-index:1}.hero-kicker{font-size:9px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold2)}
 .arch{width:min(430px,88vw);height:510px;margin:34px auto 24px;padding:7px;position:relative;isolation:isolate;background:linear-gradient(145deg,#f0d99f,#9c783e 48%,#e7d4a5),url("./jharokha.jpg.jpeg") center/cover;clip-path:polygon(50% 0%,55% 5%,59% 7%,62% 12%,67% 14%,69% 20%,75% 24%,77% 31%,83% 36%,86% 45%,90% 55%,92% 66%,92% 100%,8% 100%,8% 66%,10% 55%,14% 45%,17% 36%,23% 31%,25% 24%,31% 20%,33% 14%,38% 12%,41% 7%,45% 5%);filter:drop-shadow(0 24px 35px #0008);animation:floatArch 7s ease-in-out infinite}
 .arch:before{content:"";position:absolute;inset:8px;z-index:3;pointer-events:none;border:1px solid #f4e3b7;clip-path:polygon(50% 0%,55% 5%,59% 7%,62% 12%,67% 14%,69% 20%,75% 24%,77% 31%,83% 36%,86% 45%,90% 55%,92% 66%,92% 100%,8% 100%,8% 66%,10% 55%,14% 45%,17% 36%,23% 31%,25% 24%,31% 20%,33% 14%,38% 12%,41% 7%,45% 5%)}
@@ -169,12 +169,58 @@
 .loader.floating .lantern{animation-play-state:running!important}
 .loader.opening .knock-prompt{opacity:0;pointer-events:none}
 @media(max-width:600px){.knock-prompt{width:min(285px,78vw);padding:16px 12px}.knock-prompt strong{font-size:20px}}
+
+/* Natural hinged Mughal doors, real jharokha backdrop and flight flourish */
+.loader{perspective:1600px;background:linear-gradient(180deg,#071b1755,#071b1788),url("./jharokha.jpg.jpeg") center/cover no-repeat}
+.door{width:50%;top:0;bottom:0;z-index:8;transform-style:preserve-3d;backface-visibility:hidden;transition:transform 2.65s cubic-bezier(.62,.02,.24,1),filter 2.65s ease;will-change:transform}
+.door-left{left:0;right:auto;transform-origin:left center;background-position:center,left center}
+.door-right{right:0;left:auto;transform-origin:right center;background-position:center,right center}
+.door:before{inset:13px;border:1px solid #d8bd82a8;box-shadow:inset 0 0 24px #0005}
+.door:after{font-size:25px;top:50%;filter:drop-shadow(0 2px 5px #0009)}
+.loader.opening .door-left{transform:rotateY(-108deg);filter:brightness(.82)}
+.loader.opening .door-right{transform:rotateY(108deg);filter:brightness(.82)}
+.knock-prompt{z-index:10;cursor:pointer}
+.loader.opening .knock-prompt{opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.lantern{background-image:url("./lantern-1.png.png");background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 0 10px #f1d49a99);animation-timing-function:cubic-bezier(.38,.02,.62,1)}
+.loader.floating .lantern{animation-play-state:running}
+.flight-route{position:absolute;z-index:4;left:50%;top:23%;width:min(590px,92vw);height:180px;transform:translate(-50%,-12px);opacity:0;pointer-events:none;transition:opacity 1.2s ease,transform 1.6s ease}
+.flight-route svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.route-from,.route-to{position:absolute;font:600 9px Manrope,sans-serif;letter-spacing:.28em;color:#f5e7c6;text-shadow:0 2px 10px #000;white-space:nowrap}
+.route-from{left:0;top:100px}.route-to{right:0;top:76px}
+.route-plane{position:absolute;left:4%;top:91px;font-size:24px;color:#fff0c8;text-shadow:0 0 14px #f2d18c;transform:rotate(-15deg)}
+.route-heart{position:absolute;left:49%;top:18px;font:30px Georgia,serif;color:#f4d8bd;text-shadow:0 0 18px #e8bd9c;animation:heartDrift 3s ease-in-out infinite}
+.loader.route-visible .flight-route{opacity:1;transform:translate(-50%,0)}
+.loader.route-visible .route-plane{animation:planeJourney 4.8s cubic-bezier(.35,.05,.25,1) forwards}
+@keyframes planeJourney{0%{left:4%;top:91px;transform:rotate(-15deg) scale(.85)}45%{left:48%;top:24px;transform:rotate(-4deg) scale(1)}100%{left:88%;top:65px;transform:rotate(12deg) scale(.88)}}
+@keyframes heartDrift{50%{transform:translateY(-7px) scale(1.08)}}
+html,body{min-height:100%;background:#102b24}
+body{background:linear-gradient(#102b2433,#102b2444),url("./jharokha.jpg.jpeg") center center/cover fixed no-repeat}
+main{background:transparent}
+.hero{background:linear-gradient(180deg,#071c1755,#0a211b88),url("./jharokha.jpg.jpeg") center center/cover no-repeat}
+.section.intro{background:rgba(248,243,231,.90)}
+.section.save{background:rgba(233,227,213,.88)}
+.section.story{background:rgba(16,43,36,.91)}
+.section.details{background:rgba(251,248,240,.91)}
+.section.venue{background:rgba(11,33,27,.92)}
+.section.closing{background:rgba(238,231,216,.91)}
+.section.portraits{background:rgba(247,241,229,.91)}
+@media(max-width:600px){
+ .door{width:50%;transition-duration:2.35s}
+ .door:before{inset:8px}
+ .flight-route{top:19%;width:94vw;height:145px}
+ .route-from{top:83px;font-size:8px}.route-to{top:65px;font-size:8px}
+ .route-plane{top:76px;font-size:20px}
+ .route-heart{top:12px;font-size:25px}
+ body{background-attachment:scroll}
+}
+@media(prefers-reduced-motion:reduce){.flight-route,.route-plane,.route-heart{animation:none!important}.door{transition-duration:.01ms}}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
  <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div>
- <div class="scroll-invite"><div class="scroll-seal">A <span>&amp;</span> M</div><div class="scroll-title">Areeqa <i>&amp;</i> Muneeb</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
+ <div class="flight-route" aria-hidden="true"><span class="route-from">LONDON</span><svg viewBox="0 0 520 150" role="presentation"><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#e8d5a5" stroke-width="1.7" stroke-dasharray="5 8"/><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#fff4d6" stroke-width=".8" opacity=".7"/></svg><span class="route-plane">✈</span><span class="route-heart">♡</span><span class="route-to">ISLAMABAD</span></div><div class="scroll-invite"><div class="scroll-seal">A <span>&amp;</span> M</div><div class="scroll-title">Areeqa <i>&amp;</i> Muneeb</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <main>
@@ -208,7 +254,7 @@
  window.scrollTo({top:0,left:0,behavior:'instant'});
  document.body.style.overflow='hidden';
  const lanternLayer=loader;
- for(let i=0;i<22;i++){const light=document.createElement('i');light.className='lantern';light.setAttribute('aria-hidden','true');light.style.left=(2+Math.random()*96)+'%';light.style.width=(22+Math.random()*46)+'px';light.style.height=(34+Math.random()*66)+'px';light.style.animationDuration=(18+Math.random()*18)+'s';light.style.animationDelay=(Math.random()*2)+'s';light.style.setProperty('--sway',(Math.random()*58-29)+'px');lanternLayer.appendChild(light);}
+ for(let i=0;i<22;i++){const light=document.createElement('i');light.className='lantern';light.setAttribute('aria-hidden','true');light.style.left=(2+Math.random()*96)+'%';light.style.width=(22+Math.random()*46)+'px';light.style.height=(34+Math.random()*66)+'px';light.style.animationDuration=(22+Math.random()*13)+'s';light.style.animationDelay=(Math.random()*2)+'s';light.style.setProperty('--sway',(Math.random()*58-29)+'px');lanternLayer.appendChild(light);}
  const knockPrompt=document.getElementById('knockPrompt');
  let knocks=0,knockReset=null,doorsOpened=false;
  function knockDoor(){
@@ -219,11 +265,11 @@
   if(knockPrompt)knockPrompt.querySelector('small').textContent=knocks===1?'One more knock to open the doors':'The doors are opening…';
   if(knockReset)clearTimeout(knockReset);
   if(knocks>=2){
-   doorsOpened=true;loader.classList.add('opening');
+   doorsOpened=true;loader.classList.remove('knock-one','knock-two');loader.classList.add('opening');
    if(knockPrompt)knockPrompt.classList.add('hide');
-   window.setTimeout(()=>loader.classList.add('floating'),1900);
-   window.setTimeout(()=>loader.classList.add('card-reveal'),5100);
-   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},9300);
+   window.setTimeout(()=>{loader.classList.add('floating','route-visible');},1550);
+   window.setTimeout(()=>loader.classList.add('card-reveal'),4300);
+   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},7600);
   }else{
    knockReset=window.setTimeout(()=>{knocks=0;loader.classList.remove('knock-one','knock-two');if(knockPrompt)knockPrompt.querySelector('small').textContent='Tap the doors twice to knock';},2200);
   }
