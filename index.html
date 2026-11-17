@@ -150,7 +150,7 @@ img{max-width:100%}
 .door-right{background-position:center,right center}
 .loader.opening .door-left{transform:translateX(-103%)}
 .loader.opening .door-right{transform:translateX(103%)}
-.lantern{background-image:url("./lantern-1.png%20(2).jpg");background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 0 12px #f6d58a);animation-name:rise}
+.lantern{background-image:url("./lantern-1.png.png");background-size:contain;background-position:center;background-repeat:no-repeat;filter:drop-shadow(0 0 12px #f6d58a);animation-name:rise}
 .hero{background-image:linear-gradient(180deg,#061b1760,#061b1799),url("./jharokha.jpg.jpeg");background-size:cover;background-position:center}
 .story-frame img{object-fit:cover}
 .scroll-invite{z-index:4;box-shadow:0 24px 90px #000b,0 0 35px #e7d4a544}
@@ -646,7 +646,7 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 .loader.opening .door-right{transform:perspective(1500px) rotateY(88deg)!important}
 .loader.drone-flight .door-scene{transform:scale(1.7)!important;opacity:0!important}
 .site-lantern-layer{position:fixed;inset:0;z-index:14;overflow:hidden;pointer-events:none;contain:strict}
-.site-lantern-layer .site-lantern{position:absolute;bottom:-150px;width:clamp(24px,4vw,56px);height:clamp(36px,6vw,82px);background:url("./lantern-1.png.png") center/contain no-repeat;filter:drop-shadow(0 0 13px #edc978bb);opacity:0;will-change:transform}
+.site-lantern-layer .site-lantern{position:absolute;bottom:-150px;width:clamp(24px,4vw,56px);height:clamp(36px,6vw,82px);background-image:url("./lantern-1.png.png");background-position:center;background-size:contain;background-repeat:no-repeat;filter:drop-shadow(0 0 13px #edc978bb);opacity:0;will-change:transform;animation:siteLanternFlight 17s ease-in-out infinite}
 @keyframes siteLanternFlight{0%{transform:translate3d(0,0,0) rotate(-7deg) scale(.78);opacity:0}8%{opacity:.95}48%{transform:translate3d(var(--drift),-58vh,0) rotate(5deg) scale(1)}92%{opacity:.8}100%{transform:translate3d(calc(var(--drift)*-.65),-125vh,0) rotate(-8deg) scale(.88);opacity:0}}
 .site-couple-anim{position:fixed;left:0;right:0;bottom:0;height:0;z-index:13;pointer-events:none;perspective:900px}
 .site-couple-anim img{position:absolute;bottom:-8px;width:clamp(66px,9vw,116px);height:clamp(105px,18vh,190px);object-fit:contain;filter:drop-shadow(0 7px 9px #1c110b55);transform-style:preserve-3d;will-change:transform}
