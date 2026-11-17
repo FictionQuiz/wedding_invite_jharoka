@@ -625,6 +625,50 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
 }
 @media(prefers-reduced-motion:reduce){.pull-person,.rope-pair{animation:none!important}.reveal{opacity:1!important;transform:none!important}}
 
+
+/* HOORIQA final visual pass: clean portraits, crisp doors, full-screen lanterns + animated couple */
+.portrait-grid{max-width:900px!important;gap:28px!important;align-items:stretch!important}
+.portrait-card{position:relative!important;padding:12px!important;border:1px solid #c5a56b!important;background:linear-gradient(145deg,#fff9eb,#ead9b8)!important;box-shadow:0 18px 42px #102b2430,inset 0 0 0 4px #fffdf4!important}
+.portrait-card:before{content:"";position:absolute;inset:6px;border:1px solid #b9975b77;pointer-events:none;z-index:2}
+.portrait-card img{display:block!important;width:100%!important;height:clamp(360px,48vw,520px)!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center center!important;background:linear-gradient(180deg,#e9dfca,#f7f0e2)!important;padding:8px!important;border:0!important;box-shadow:none!important}
+.portrait-card figcaption{position:relative;z-index:3;margin-top:0!important;padding:17px 8px 12px!important;background:linear-gradient(180deg,#fff8e9,#ead8b5)!important;border-top:1px solid #c5a56b}
+.couple-frame{max-width:900px!important;margin:32px auto 0!important;padding:12px!important;background:linear-gradient(145deg,#f8e8c3,#9d783e 45%,#f4dfad)!important;border:1px solid #d5b878!important;box-shadow:0 25px 60px #071b1744,inset 0 0 0 4px #fff8e8!important;overflow:hidden!important}
+.couple-frame img{width:100%!important;height:auto!important;max-height:760px!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#eee3cf!important;border:1px solid #fff4d9!important;padding:0!important}
+.couple-frame .couple-caption{position:relative!important;margin:0!important;padding:15px 8px 8px!important;color:#5d1730!important;font:italic 26px "Cormorant Garamond",serif!important;background:linear-gradient(180deg,#fff8e9,#ead8b5)!important}
+.door-scene{inset:0!important;transform:none!important;overflow:hidden!important;background:#1b100b!important}
+.door{background-image:url("./door%20opening.jpeg")!important;background-repeat:no-repeat!important;background-size:200% 100%!important;background-color:#24150e!important;filter:none!important;image-rendering:auto!important;box-shadow:none!important;backface-visibility:hidden!important}
+.door-left{left:0!important;background-position:left center!important;transform-origin:left center!important}
+.door-right{right:0!important;background-position:right center!important;transform-origin:right center!important}
+.door:before{inset:0!important;border:0!important;background:linear-gradient(90deg,#130b0870,transparent 18%,transparent 82%,#130b0870)!important}
+.door:after{font-size:24px!important}
+.loader.camera-push .door-scene{transform:scale(1.12)!important}
+.loader.opening .door-left{transform:perspective(1500px) rotateY(-88deg)!important}
+.loader.opening .door-right{transform:perspective(1500px) rotateY(88deg)!important}
+.loader.drone-flight .door-scene{transform:scale(1.7)!important;opacity:0!important}
+.site-lantern-layer{position:fixed;inset:0;z-index:14;overflow:hidden;pointer-events:none;contain:strict}
+.site-lantern-layer .site-lantern{position:absolute;bottom:-150px;width:clamp(24px,4vw,56px);height:clamp(36px,6vw,82px);background:url("./lantern-1.png.png") center/contain no-repeat;filter:drop-shadow(0 0 13px #edc978bb);opacity:0;will-change:transform}
+@keyframes siteLanternFlight{0%{transform:translate3d(0,0,0) rotate(-7deg) scale(.78);opacity:0}8%{opacity:.95}48%{transform:translate3d(var(--drift),-58vh,0) rotate(5deg) scale(1)}92%{opacity:.8}100%{transform:translate3d(calc(var(--drift)*-.65),-125vh,0) rotate(-8deg) scale(.88);opacity:0}}
+.site-couple-anim{position:fixed;left:0;right:0;bottom:0;height:0;z-index:13;pointer-events:none;perspective:900px}
+.site-couple-anim img{position:absolute;bottom:-8px;width:clamp(66px,9vw,116px);height:clamp(105px,18vh,190px);object-fit:contain;filter:drop-shadow(0 7px 9px #1c110b55);transform-style:preserve-3d;will-change:transform}
+.site-couple-anim .site-bride{left:8px;animation:coupleIdleBride 3.2s ease-in-out infinite}
+.site-couple-anim .site-groom{right:8px;animation:coupleIdleGroom 3.2s ease-in-out .35s infinite}
+@keyframes coupleIdleBride{0%,100%{transform:translate3d(0,0,0) rotateY(-10deg) rotateZ(-1deg)}30%{transform:translate3d(0,-13px,14px) rotateY(12deg) rotateZ(2deg)}55%{transform:translate3d(0,-3px,0) rotateY(-7deg) rotateZ(-2deg)}}
+@keyframes coupleIdleGroom{0%,100%{transform:translate3d(0,0,0) rotateY(10deg) rotateZ(1deg)}30%{transform:translate3d(0,-16px,16px) rotateY(-12deg) rotateZ(-2deg)}55%{transform:translate3d(0,-3px,0) rotateY(7deg) rotateZ(2deg)}}
+body.scratch-moment .site-couple-anim .site-bride{animation:scratchPose 1s ease-in-out infinite}
+body.scratch-moment .site-couple-anim .site-groom{animation:scratchPose 1s ease-in-out .18s infinite}
+@keyframes scratchPose{0%,100%{transform:translateY(0) rotateZ(-2deg) rotateY(0)}35%{transform:translateY(-9px) rotateZ(7deg) rotateY(18deg)}70%{transform:translateY(-2px) rotateZ(-5deg) rotateY(-10deg)}}
+body.jump-moment .site-couple-anim img{animation:coupleJump .82s cubic-bezier(.2,.8,.25,1) 2}
+@keyframes coupleJump{0%,100%{transform:translate3d(0,0,0) rotateX(0)}45%{transform:translate3d(0,-42px,35px) rotateX(12deg) rotateY(18deg)}70%{transform:translate3d(0,-8px,4px) rotateX(-5deg)}}
+@media(max-width:600px){
+ .portrait-card img{height:clamp(250px,68vw,390px)!important;padding:5px!important}
+ .portrait-grid{gap:14px!important}
+ .portrait-card{padding:8px!important}
+ .couple-frame{padding:8px!important}
+ .site-couple-anim img{width:58px;height:96px;bottom:-4px}
+ .site-couple-anim .site-bride{left:2px}.site-couple-anim .site-groom{right:2px}
+}
+@media(prefers-reduced-motion:reduce){.site-lantern-layer .site-lantern,.site-couple-anim img{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -697,7 +741,18 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;bac
  }
  loader.querySelectorAll('.door').forEach(door=>door.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();}));
  if(knockPrompt)knockPrompt.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();});
- function tick(){const target=new Date('2027-01-04T00:00:00+05:00').getTime(),diff=target-Date.now(),el=document.getElementById('countdown');if(diff<=0){el.innerHTML='<div class="timebox"><strong>Today</strong><span>Celebration</span></div>';return;}const vals=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60],labels=['Days','Hours','Minutes','Seconds'];el.innerHTML=vals.map((v,i)=>'<div class="timebox"><strong>'+String(v).padStart(2,'0')+'</strong><span>'+labels[i]+'</span></div>').join('');}
+ function tick(){const target=new Date('2027-01-04T00:00:00+05:00').getTime(),diff=target-Date.now(),el=document.getElementById('countdown');if(diff<=0){el.innerHTML='<div class
+  // Full-page floating lanterns and subtle animated bride/groom cameos.
+  const lanternLayer=document.createElement('div');lanternLayer.className='site-lantern-layer';lanternLayer.setAttribute('aria-hidden','true');document.body.appendChild(lanternLayer);
+  for(let i=0;i<18;i++){const light=document.createElement('i');light.className='site-lantern';light.style.left=(Math.random()*100)+'%';light.style.setProperty('--drift',((Math.random()-.5)*150)+'px');light.style.animationDuration=(13+Math.random()*12)+'s';light.style.animationDelay=(Math.random()*22)+'s';lanternLayer.appendChild(light);}
+  const cameo=document.createElement('div');cameo.className='site-couple-anim';cameo.setAttribute('aria-hidden','true');
+  cameo.innerHTML='<img class="site-bride" src="./bride-pulling-rope.png.png" alt=""><img class="site-groom" src="./groom-pulling-rope.png.png" alt="">';document.body.appendChild(cameo);
+  const scratchSection=document.querySelector('.save');
+  if(scratchSection&&'IntersectionObserver' in window){const scratchObserver=new IntersectionObserver(entries=>entries.forEach(entry=>document.body.classList.toggle('scratch-moment',entry.isIntersecting)),{threshold:.28});scratchObserver.observe(scratchSection);}
+  const jumpTargets=document.querySelectorAll('.section');
+  if(jumpTargets.length&&'IntersectionObserver' in window){const jumpObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting&&entry.target.classList.contains('portraits')){document.body.classList.add('jump-moment');window.setTimeout(()=>document.body.classList.remove('jump-moment'),1700);}}),{threshold:.45});jumpTargets.forEach(section=>jumpObserver.observe(section));}
+
+ ="timebox"><strong>Today</strong><span>Celebration</span></div>';return;}const vals=[Math.floor(diff/86400000),Math.floor(diff/3600000)%24,Math.floor(diff/60000)%60,Math.floor(diff/1000)%60],labels=['Days','Hours','Minutes','Seconds'];el.innerHTML=vals.map((v,i)=>'<div class="timebox"><strong>'+String(v).padStart(2,'0')+'</strong><span>'+labels[i]+'</span></div>').join('');}
  tick();setInterval(tick,1000);
  const canvas=document.getElementById('scratch'),ctx=canvas.getContext('2d',{willReadFrequently:true});
  const modal=document.getElementById('revealModal'),glitter=document.getElementById('glitterLayer'),closeModal=document.getElementById('closeReveal');
