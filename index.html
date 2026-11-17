@@ -742,10 +742,10 @@ body.jump-moment .site-couple-anim img{animation:coupleJump .82s cubic-bezier(.2
  loader.querySelectorAll('.door').forEach(door=>door.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();}));
  if(knockPrompt)knockPrompt.addEventListener('pointerdown',e=>{e.preventDefault();knockDoor();});
  // Floating lanterns and animated couple elements.
- const lanternLayer=document.createElement('div');
- lanternLayer.className='site-lantern-layer';
- lanternLayer.setAttribute('aria-hidden','true');
- document.body.appendChild(lanternLayer);
+ const siteLanternLayer=document.createElement('div');
+ siteLanternLayer.className='site-lantern-layer';
+ siteLanternLayer.setAttribute('aria-hidden','true');
+ document.body.appendChild(siteLanternLayer);
  for(let i=0;i<18;i++){
   const light=document.createElement('i');
   light.className='site-lantern';
@@ -753,7 +753,7 @@ body.jump-moment .site-couple-anim img{animation:coupleJump .82s cubic-bezier(.2
   light.style.setProperty('--drift',((Math.random()-.5)*150)+'px');
   light.style.animationDuration=(13+Math.random()*12)+'s';
   light.style.animationDelay=(Math.random()*22)+'s';
-  lanternLayer.appendChild(light);
+  siteLanternLayer.appendChild(light);
  }
  const cameo=document.createElement('div');
  cameo.className='site-couple-anim';
