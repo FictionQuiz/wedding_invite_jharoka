@@ -458,12 +458,62 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
 }
 @media(prefers-reduced-motion:reduce){.portrait-card,.portrait-card img,.guest-panel,.guest-form button{transition:none!important}}
 
+
+/* HOORIQA Jharokha cinematic entrance */
+.loader{background:#2b160f url("./jharokha.jpg.jpeg") center/cover no-repeat!important;isolation:isolate}
+.loader:before,.loader:after{display:none!important}
+.door-scene{position:absolute;inset:0;z-index:5;transform:scale(1.035);transform-origin:50% 54%;transition:transform 2.8s cubic-bezier(.2,.7,.2,1),opacity 1.4s ease;will-change:transform}
+.door-scene:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#1a0c0870 0%,transparent 25%,transparent 70%,#170b08a0 100%),radial-gradient(ellipse at center,transparent 48%,#1b0d0a66 100%);z-index:2}
+.door{position:absolute!important;top:0!important;bottom:0!important;width:50.15%!important;z-index:1!important;background-image:url("./door%20opening.jpeg")!important;background-size:200% 100%!important;background-repeat:no-repeat!important;border:0!important;box-shadow:inset 0 0 35px #2b160a55!important;border-radius:0!important;transition:transform 2.65s cubic-bezier(.72,0,.16,1)!important;cursor:pointer}
+.door:before{content:""!important;position:absolute!important;inset:12px!important;border:1px solid #e7c98b99!important;pointer-events:none}
+.door:after{content:""!important;position:absolute!important;top:50%!important;width:12px;height:12px;border:1px solid #f4dda0!important;border-radius:50%!important;background:radial-gradient(circle at 35% 35%,#fff4c6,#a87934 70%)!important;box-shadow:0 0 16px #f6d995!important}
+.door-left{left:0!important;background-position:left center!important;transform-origin:left center!important}
+.door-right{right:0!important;background-position:right center!important;transform-origin:right center!important}
+.door-left:after{right:20px!important}.door-right:after{left:20px!important}
+.loader.knock-one .door-scene{animation:doorKnock .24s ease-in-out 2}
+.loader.knock-two .door-scene{animation:doorKnock .2s ease-in-out 3}
+@keyframes doorKnock{0%,100%{transform:scale(1.035) translateX(0)}35%{transform:scale(1.035) translateX(-5px)}70%{transform:scale(1.035) translateX(4px)}}
+.loader.camera-push .door-scene{transform:scale(1.24);opacity:.98}
+.loader.opening .door-left{transform:perspective(1200px) rotateY(-88deg) translateX(-12%)!important}
+.loader.opening .door-right{transform:perspective(1200px) rotateY(88deg) translateX(12%)!important}
+.loader.drone-flight .door-scene{transform:scale(1.9);opacity:0}
+.knock-prompt{z-index:12!important;top:50%!important;bottom:auto!important;transform:translate(-50%,-50%)!important;background:linear-gradient(145deg,#3b2115df,#1e100be8)!important;border:1px solid #d6b779!important;box-shadow:0 20px 65px #12080488,inset 0 0 0 4px #f4e4c022!important;color:#f7e8c8!important;backdrop-filter:blur(9px)}
+.knock-prompt strong{color:#f6dfad!important;font-family:"Cormorant Garamond",serif!important;font-size:24px!important}
+.knock-prompt small,.knock-hint{color:#ead7b1!important}
+.knock-icon{color:#e8ca87!important}
+.rope-pullers{z-index:8!important}
+.scroll-invite{position:absolute!important;left:50%!important;top:50%!important;z-index:10!important;width:min(88vw,690px)!important;height:91svh!important;max-height:960px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;transform:translate(-50%,-50%) scaleY(.015) scale(.92)!important;transform-origin:center!important;opacity:0!important;transition:transform 2.7s cubic-bezier(.18,.75,.2,1),opacity .8s ease!important}
+.scroll-art{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 24px 38px #160b0780)!important}
+.welcome-quote{position:absolute!important;left:22%!important;right:22%!important;top:26%!important;height:47%!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;color:#684020!important;opacity:0!important;transform:translateY(18px)!important;transition:opacity 1.1s ease 1.1s,transform 1.1s ease 1.1s!important}
+.welcome-quote p{font:italic clamp(18px,3.4vw,30px)/1.48 "Cormorant Garamond",serif!important;color:#70472b!important;text-shadow:0 1px 0 #fff8e8!important;margin:12px 0!important}
+.welcome-quote small{font:italic clamp(14px,2vw,18px) "Cormorant Garamond",serif!important;color:#98652e!important;letter-spacing:.08em!important}
+.welcome-ornament{color:#b27a32!important;letter-spacing:.35em!important}
+.loader.scroll-opening .scroll-invite{transform:translate(-50%,-50%) scaleY(1) scale(1)!important;opacity:1!important}
+.loader.scroll-opening .welcome-quote{opacity:1!important;transform:translateY(0)!important}
+.loader.scroll-fold .scroll-invite{transform:translate(-50%,-50%) scaleY(.018) scale(.88)!important;opacity:0!important;transition:transform 1.45s cubic-bezier(.65,0,.35,1),opacity .9s ease!important}
+.loader.scroll-fold .welcome-quote{opacity:0!important;transition:opacity .3s!important}
+.loader.floating .lantern{animation-play-state:running!important;opacity:.96}
+.loader .lantern{z-index:11!important;bottom:-130px!important}
+@media(max-width:600px){
+ .door-scene{transform:scale(1.025)}
+ .door{background-size:200% 100%!important}
+ .door:before{inset:7px!important}
+ .door-left:after{right:12px!important}.door-right:after{left:12px!important}
+ .knock-prompt{width:min(86vw,330px)!important}
+ .scroll-invite{width:100vw!important;height:90svh!important;max-height:none!important}
+ .scroll-art{object-fit:contain!important}
+ .welcome-quote{left:21%!important;right:21%!important;top:27%!important;height:43%!important}
+ .welcome-quote p{font-size:clamp(15px,4vw,21px)!important;line-height:1.38!important}
+ .welcome-quote small{font-size:14px!important}
+}
+@media(prefers-reduced-motion:reduce){.door-scene,.door,.scroll-invite,.welcome-quote{transition-duration:.01ms!important}.loader.knock-one .door-scene,.loader.knock-two .door-scene{animation:none!important}}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-pair" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
- <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope.jpeg" alt=""><div class="welcome-quote"><span class="welcome-ornament">✧ ❧ ✧</span><p>Two hearts, one beautiful beginning.<br>With love, blessings and joy,<br>we welcome you to our celebration.</p><small>— Sarah &amp; Maaz —</small></div></div>
+ <div class="door-scene" aria-hidden="true"><button class="door door-left" type="button" tabindex="-1" aria-label="Left door"></button><button class="door door-right" type="button" tabindex="-1" aria-label="Right door"></button></div><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-pair" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
+ <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope%20(2).jpeg" alt=""><div class="welcome-quote"><span class="welcome-ornament">✧ ❧ ✧</span><p>With the blessings of Allah<br>and the love of our families,<br>we warmly welcome you<br>to celebrate a beautiful beginning.</p><small>— Sarah &amp; Maaz —</small></div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
@@ -515,12 +565,15 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
   if(knockPrompt)knockPrompt.querySelector('small').textContent=knocks===1?'One more knock to open the doors':'The doors are opening…';
   if(knockReset)clearTimeout(knockReset);
   if(knocks>=2){
-   doorsOpened=true;loader.classList.remove('knock-one','knock-two');loader.classList.add('opening');
+   doorsOpened=true;loader.classList.remove('knock-one','knock-two');
    if(knockPrompt)knockPrompt.classList.add('hide');
-   window.setTimeout(()=>loader.classList.add('scroll-opening'),1150);
-   window.setTimeout(()=>loader.classList.add('scroll-fold'),6500);
-   window.setTimeout(()=>{loader.classList.add('floating');},7950);
-   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},11200);
+   loader.classList.add('camera-push');
+   window.setTimeout(()=>{loader.classList.add('opening');},1450);
+   window.setTimeout(()=>{loader.classList.add('drone-flight');},4050);
+   window.setTimeout(()=>loader.classList.add('scroll-opening'),4700);
+   window.setTimeout(()=>loader.classList.add('scroll-fold'),9200);
+   window.setTimeout(()=>{loader.classList.add('floating');},10400);
+   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},13300);
   }else{
    knockReset=window.setTimeout(()=>{knocks=0;loader.classList.remove('knock-one','knock-two');if(knockPrompt)knockPrompt.querySelector('small').textContent='Tap the doors twice to knock';},2200);
   }
