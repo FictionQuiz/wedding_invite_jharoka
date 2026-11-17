@@ -378,11 +378,38 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
  .rope-bride{left:13%}.rope-groom{right:13%}
 }
 
+
+/* Reposition the newly uploaded paired tassel rope as one shared prop */
+.rope-pullers{inset:0;overflow:hidden}
+.pull-rope-img.rope-pair{position:absolute;left:50%;top:3%;width:min(62vw,480px);height:64%;transform:translateX(-50%);object-fit:contain;object-position:center top;mix-blend-mode:multiply;filter:drop-shadow(0 8px 12px #49331635);z-index:2}
+.pull-person{z-index:3;bottom:0;width:clamp(130px,23vw,250px);height:55%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 9px 13px #0004)}
+.person-bride{left:1%;animation:bridePullRope 1.15s cubic-bezier(.4,0,.2,1) infinite}
+.person-groom{right:1%;animation:groomPullRope 1.15s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes bridePullRope{0%,100%{transform:translate(0,0) rotate(0)}35%{transform:translate(-12px,-7px) rotate(-3deg)}65%{transform:translate(-5px,1px) rotate(1deg)}}
+@keyframes groomPullRope{0%,100%{transform:translate(0,0) rotate(0)}35%{transform:translate(12px,-7px) rotate(3deg)}65%{transform:translate(5px,1px) rotate(-1deg)}}
+.loader.scroll-opening .rope-pair{animation:ropeTension .7s ease-in-out infinite alternate}
+@keyframes ropeTension{from{transform:translateX(-50%) translateY(0) rotate(-1deg)}to{transform:translateX(-50%) translateY(8px) rotate(1deg)}}
+/* Scroll artwork: preserve its proportions and make the parchment large */
+.scroll-invite{width:min(88vw,760px)!important;height:90svh!important;max-height:900px!important;overflow:visible!important}
+.scroll-art{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;filter:drop-shadow(0 22px 30px #3c2a1740)}
+.welcome-quote{left:23%!important;right:23%!important;top:19%!important;height:47%!important}
+.welcome-quote p{font-size:clamp(18px,3.2vw,27px)!important;line-height:1.4!important}
+@media(max-width:600px){
+ .scroll-invite{width:100vw!important;height:91svh!important;max-height:none!important}
+ .scroll-art{object-fit:contain!important;object-position:center center!important}
+ .welcome-quote{left:23%!important;right:23%!important;top:20%!important;height:44%!important}
+ .welcome-quote p{font-size:clamp(15px,4.1vw,20px)!important;line-height:1.35!important}
+ .pull-person{width:34vw;height:43%;bottom:0}
+ .person-bride{left:-2%}.person-groom{right:-2%}
+ .pull-rope-img.rope-pair{width:88vw;height:54%;top:5%}
+}
+@media(prefers-reduced-motion:reduce){.person-bride,.person-groom,.rope-pair{animation:none!important}}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-bride" src="./rope-png.jpeg" alt=""><img class="pull-rope-img rope-groom" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
+ <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-pair" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
  <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope.jpeg" alt=""><div class="welcome-quote"><span class="welcome-ornament">✧ ❧ ✧</span><p>Two hearts, one beautiful beginning.<br>With love, blessings and joy,<br>we welcome you to our celebration.</p><small>— Sarah &amp; Maaz —</small></div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
