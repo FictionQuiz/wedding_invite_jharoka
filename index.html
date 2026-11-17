@@ -405,6 +405,59 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
 }
 @media(prefers-reduced-motion:reduce){.person-bride,.person-groom,.rope-pair{animation:none!important}}
 
+
+/* Cinematic maroon heart scratch reveal */
+.scratch-box{width:238px!important;height:220px!important;max-width:78vw!important;margin:36px auto 18px!important;position:relative;overflow:hidden!important;border:0!important;border-radius:0!important;clip-path:polygon(50% 94%,43% 87%,25% 71%,11% 56%,3% 42%,0 29%,4% 17%,13% 8%,25% 5%,37% 9%,50% 24%,63% 9%,75% 5%,87% 8%,96% 18%,100% 30%,97% 43%,89% 57%,74% 72%,57% 88%)!important;background:linear-gradient(145deg,#4a0718,#8c1830 48%,#3b0614)!important;box-shadow:0 22px 45px #36071366,inset 0 0 0 3px #d7b36d!important}
+.scratch-box:before{inset:13px!important;border:1px solid #e5c98b!important;display:grid!important;place-items:start center!important;padding-top:23px!important;color:#f2dba8!important;content:"✦  SCRATCH TO REVEAL  ✦"!important;font:8px Manrope,sans-serif!important;letter-spacing:.18em!important}
+.scratch-copy{z-index:1!important;inset:30px 25px 35px!important;padding:22px 0 0!important;color:#fff0d4!important;font:italic clamp(20px,4vw,27px) "Cormorant Garamond",serif!important;text-shadow:0 2px 12px #27030c!important}
+.scratch-copy small{color:#f0d7a6!important;font-size:8px!important;letter-spacing:.12em!important}
+#scratch{z-index:2!important}
+.hint{color:#8b1730!important;font:10px Manrope,sans-serif!important;letter-spacing:.16em!important}
+.portrait-grid{align-items:stretch!important}
+.portrait-card{overflow:hidden!important;border:1px solid #b9975b!important;background:linear-gradient(145deg,#fff7e9,#ead8bb)!important;box-shadow:0 18px 45px #25040e22!important;transition:transform .8s cubic-bezier(.2,.7,.2,1),box-shadow .8s!important}
+.portrait-card:hover{transform:translateY(-9px) scale(1.015)!important;box-shadow:0 28px 55px #31071135!important}
+.portrait-card img{width:100%!important;height:440px!important;aspect-ratio:4/5!important;object-fit:cover!important;object-position:center 22%!important;transition:transform 1.2s ease,filter 1s ease!important;filter:saturate(.92)!important}
+.portrait-card:hover img{transform:scale(1.045)!important;filter:saturate(1.08)!important}
+.portrait-card figcaption{background:linear-gradient(180deg,#fff8eb,#e9d7b8)!important}
+.portrait-groom img{object-position:center 18%!important}
+.portrait-bride img{object-position:center 20%!important}
+.couple-frame img{aspect-ratio:16/10!important;object-fit:cover!important;object-position:center 35%!important}
+.story-frame img{aspect-ratio:16/10!important;object-fit:cover!important;object-position:center 35%!important}
+/* Cinematic invitation panels: wine velvet, antique gold and warm ivory */
+.contact-rsvp{background:radial-gradient(ellipse at 50% 0%,#6f1428 0%,#2b0714 55%,#17050c 100%)!important;overflow:hidden}
+.contact-rsvp .kicker{color:#e7c98a!important}
+.contact-rsvp .heading{color:#f5dfb5!important;text-shadow:0 5px 25px #0008}
+.contact-rsvp .body-copy{color:#eadcc9!important}
+.guest-grid{max-width:1080px!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.guest-panel{min-width:0!important;padding:30px 22px!important;background:linear-gradient(155deg,#fff8eb,#ead7b8 62%,#d8bd91)!important;border:1px solid #d6b56f!important;border-radius:3px 3px 28px 3px!important;box-shadow:0 22px 55px #09010788,inset 0 0 0 5px #fff7e566!important;transform:translateY(0);transition:transform .8s cubic-bezier(.2,.7,.2,1),box-shadow .8s!important}
+.guest-panel:hover{transform:translateY(-8px)!important;box-shadow:0 32px 65px #080106aa,inset 0 0 0 5px #fff7e566!important}
+.guest-panel:before{inset:11px!important;border:1px solid #9c6c3e88!important;border-radius:2px 2px 22px 2px!important}
+.guest-panel h3{font:italic 32px "Cormorant Garamond",serif!important;color:#5b1022!important;border-bottom:1px solid #b99159;padding-bottom:12px!important}
+.guest-panel p{color:#604a3e!important}
+.contact-person{border-bottom:1px solid #c6a675!important}
+.contact-monogram{background:#5b1022!important;color:#f5dfb5!important;border-color:#d1ae70!important;box-shadow:0 5px 14px #5b102233!important}
+.contact-person strong{color:#511020!important}
+.contact-person small{color:#816345!important}
+.guest-form label{color:#70402e!important}
+.guest-form input,.guest-form select,.guest-form textarea{background:#fffaf1!important;border:1px solid #b9925e!important;border-radius:2px!important;color:#43101d!important;transition:box-shadow .3s,border-color .3s!important}
+.guest-form input:focus,.guest-form select:focus,.guest-form textarea:focus{border-color:#76152c!important;box-shadow:0 0 0 3px #8d183022!important}
+.guest-form button{background:linear-gradient(110deg,#3c0716,#851a33,#4b0b1d)!important;border:1px solid #d7b777!important;color:#fff0d0!important;box-shadow:0 8px 20px #4c0b1d30!important;transition:transform .35s,box-shadow .35s!important}
+.guest-form button:hover{transform:translateY(-3px)!important;box-shadow:0 13px 26px #4c0b1d55!important}
+.demo-note{color:#765b42!important}
+.venue{background:linear-gradient(145deg,#210611,#5a1024 52%,#210611)!important}
+.venue-panel{background:linear-gradient(145deg,#fff5e3,#e7d2ad)!important;border:1px solid #d9b978!important;box-shadow:0 25px 60px #10020888,inset 0 0 0 5px #fff8e566!important}
+.venue-name{color:#5a1024!important}
+.venue-address{color:#694b3c!important}
+.map-preview{border:1px solid #b48b52!important;box-shadow:0 16px 36px #25050e33!important}
+.map-button{opacity:1!important;background:#5a1024!important;border-color:#d8b978!important;color:#fff0d0!important}
+@media(max-width:760px){
+ .guest-grid{grid-template-columns:1fr!important;max-width:470px!important}
+ .guest-panel{padding:27px 20px!important}
+ .portrait-card img{height:310px!important;aspect-ratio:4/5!important}
+ .scratch-box{width:220px!important;height:205px!important}
+}
+@media(prefers-reduced-motion:reduce){.portrait-card,.portrait-card img,.guest-panel,.guest-form button{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -420,7 +473,7 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
 <header class="hero">
  <div class="hero-content"><div class="hero-kicker">With the blessings of Allah and our families</div>
   <div class="arch"><div class="arch-inner"><div class="arch-ornament">✧ ❧ ✧</div><div class="family">Together with their families</div><div class="names">Sarah</div><div class="amp">&amp;</div><div class="names">Maaz</div></div></div>
-  <div class="hero-line">Invite you to witness the beginning of forever</div><div class="hero-date">Monday · 04 January 2027 · Islamabad</div><div class="scroll-cue">Scroll to discover <span>⌄</span></div>
+  <div class="hero-line">Invite you to witness the beginning of forever</div><div class="hero-date">Monday · 04 January 2027 · Lahore</div><div class="scroll-cue">Scroll to discover <span>⌄</span></div>
  </div>
 </header>
 <section class="section intro"><div class="wrap reveal"><div class="kicker">A moment made meaningful</div><h2 class="heading">A beautiful beginning</h2><div class="ornament">✧ ❧ ✧</div><p class="body-copy">Two hearts, two families, and one beautiful journey. With grateful hearts and the blessings of Allah, we invite you to join us as Sarah and Maaz begin their new chapter together.</p><div class="signature">Sarah &amp; Maaz</div><p class="body-copy" style="font-size:20px">May this union be filled with love, mercy, understanding and endless barakah.</p></div></section>
@@ -428,13 +481,13 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
  <div class="save-label">PLEASE JOIN US</div><div class="date-big">04</div><div class="date-month">Monday · January · 2027</div>
  <div class="calendar-link" aria-label="Wedding calendar">✧ &nbsp; JANUARY 2027 · SAVE OUR DATE &nbsp; ✧</div><div class="mini-calendar"><div class="mini-calendar-head"><span>MONDAY</span><span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span><span>FRIDAY</span><span>SATURDAY</span><span>SUNDAY</span></div><div class="mini-calendar-days"><i></i><i></i><i></i><i></i><span>1</span><span>2</span><span>3</span><span class="wedding-day">4<small>♥</small></span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div><p class="calendar-caption">Monday · 04 January · 8:00 PM</p></div>
  <div class="countdown" id="countdown"><div class="timebox"><strong>--</strong><span>Days</span></div><div class="timebox"><strong>--</strong><span>Hours</span></div><div class="timebox"><strong>--</strong><span>Minutes</span></div><div class="timebox"><strong>--</strong><span>Seconds</span></div></div>
- <div class="scratch-box"><div class="scratch-copy">04 January 2027<small>Monday · 8:00 PM · Islamabad</small></div><canvas id="scratch"></canvas></div><div class="hint">Gently scratch the gold to reveal the date</div>
- <div class="reveal-modal" id="revealModal" aria-hidden="true"><div class="glitter-layer" id="glitterLayer"></div><div class="reveal-dialog"><div class="reveal-star">✧</div><div class="reveal-kicker">The day is revealed</div><div class="reveal-date">04 January 2027</div><div class="reveal-place">Monday · Islamabad · 8:00 PM</div><button class="modal-close" id="closeReveal">Continue</button></div></div>
+ <div class="scratch-box"><div class="scratch-copy">04 January 2027<small>Monday · 8:00 PM · Lahore</small></div><canvas id="scratch"></canvas></div><div class="hint">Gently scratch the gold to reveal the date</div>
+ <div class="reveal-modal" id="revealModal" aria-hidden="true"><div class="glitter-layer" id="glitterLayer"></div><div class="reveal-dialog"><div class="reveal-star">✧</div><div class="reveal-kicker">The day is revealed</div><div class="reveal-date">04 January 2027</div><div class="reveal-place">Monday · Lahore · 8:00 PM</div><button class="modal-close" id="closeReveal">Continue</button></div></div>
  </div></div></section>
-<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional Pakistani wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="./bride.jpg.jpeg" alt="Sarah in a red Pakistani bridal outfit" loading="lazy"><figcaption><span>Sarah</span><small>The Bride</small></figcaption></figure><figure class="portrait-card"><img src="./groom.jpg.jpeg" alt="Maaz in an ivory sherwani and turban" loading="lazy"><figcaption><span>Maaz</span><small>The Groom</small></figcaption></figure></div><div class="couple-frame"><img src="./couple.jpg.jpeg" alt="Sarah and Maaz in coordinated traditional wedding attire" loading="lazy"><div class="couple-caption">Sarah <i>&amp;</i> Maaz</div></div><p class="portrait-note">Their wedding portraits</p></div></section>
-<section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-marquee-islamabad-wedding-hall-1024x647.jpeg" alt="Majestic Marquee Islamabad wedding hall and stage" loading="lazy"></div><div class="photo-credit">Majestic Marquee · Islamabad</div></div></section>
+<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional Pakistani wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card portrait-groom"><img src="./groom.jpg.jpeg" alt="Maaz in an ivory sherwani and turban" loading="lazy"><figcaption><span>Maaz</span><small>The Groom</small></figcaption></figure><figure class="portrait-card portrait-bride"><img src="./bride.jpg.jpeg" alt="Sarah in a red Pakistani bridal outfit" loading="lazy"><figcaption><span>Sarah</span><small>The Bride</small></figcaption></figure></div><div class="couple-frame"><img src="./couple.jpg.jpeg" alt="Sarah and Maaz in coordinated traditional wedding attire" loading="lazy"><div class="couple-caption">Sarah <i>&amp;</i> Maaz</div></div><p class="portrait-note">Their wedding portraits</p></div></section>
+<section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="./couple.jpg.jpeg" alt="Sarah and Maaz wedding portrait" loading="lazy"></div><div class="photo-credit">Sarah &amp; Maaz · Lahore</div></div></section>
 <section class="section details"><div class="wrap reveal"><div class="kicker">The celebration</div><h2 class="heading">The wedding day</h2><p class="body-copy">We would be honoured by your presence.</p><div class="detail-grid"><div class="detail"><small>Date</small><strong>04 January 2027</strong><p>Monday</p></div><div class="detail"><small>Time</small><strong>8:00 PM</strong><p>Evening celebration</p></div><div class="detail"><small>Occasion</small><strong>Wedding</strong><p>A celebration with family and friends</p></div></div></div></section>
-<section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><div class="map-preview"><iframe title="Majestic Marquee Islamabad map" src="https://maps.google.com/maps?q=Majestic%20Marquee%2C%20Islamabad&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
+<section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Lahore</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Pearl-Continental Hotel Lahore</div><p class="venue-address">Shahrah-e-Quaid-e-Azam, Mall Road, Lahore, Punjab, Pakistan</p><p class="venue-address">Grand Ballroom · A luxury hotel wedding setting</p><div class="map-preview"><iframe title="Pearl Continental Hotel Lahore map" src="https://maps.google.com/maps?q=Pearl-Continental%20Hotel%2C%20Shahrah-e-Quaid-e-Azam%2C%20Mall%20Road%2C%20Lahore&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Pearl-Continental+Hotel%2C+Shahrah-e-Quaid-e-Azam%2C+Mall+Road%2C+Lahore" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
 <section class="section contact-rsvp"><div class="wrap reveal"><div class="kicker">Be part of our happiness</div><h2 class="heading">Kindly respond</h2><p class="body-copy">Your presence will make our celebration even more special.</p><div class="guest-grid">
 <div class="guest-panel"><h3>Get in touch</h3><p>For any event-related questions, please contact the families.</p><div class="contact-person"><span class="contact-monogram">S</span><div><strong>Bride’s Family</strong><small>Contact details to be shared by the family</small></div></div><div class="contact-person"><span class="contact-monogram">M</span><div><strong>Groom’s Family</strong><small>Contact details to be shared by the family</small></div></div><p class="demo-note">For event enquiries, please reach out to the hosts directly.</p></div>
 <div class="guest-panel"><h3>Wedding RSVP</h3><form class="guest-form" id="rsvpForm"><label for="guestName">Your name</label><input id="guestName" name="name" required maxlength="60" placeholder="Enter your name"><label for="attendance">Will you attend?</label><select id="attendance" name="attendance" required><option value="">Choose one</option><option>Joyfully accepting</option><option>Regretfully declining</option></select><label for="guestCount">Number of guests</label><select id="guestCount" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select><button type="submit">Preview RSVP</button></form><p class="demo-note">Demo preview only — responses are not saved or sent yet.</p></div>
