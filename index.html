@@ -545,12 +545,92 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
 @media(max-width:760px){.guest-grid{grid-template-columns:1fr!important;max-width:470px!important}.hero-nameplate{padding:43px 18px 34px;margin:24px auto 20px}.hero-nameplate .names{font-size:clamp(55px,14vw,76px)}.scratch-box{width:235px!important;height:218px!important}.venue-photo-frame{padding:7px}.venue-photo-frame img{height:270px}}
 @media(prefers-reduced-motion:reduce){.hero-nameplate,.venue-photo-frame,.guest-panel{transition:none!important}}
 
+
+/* Final repair: clean typography, real image proportions, calm cinematic motion */
+html,body{overflow-x:hidden!important}
+body{position:relative;background:#132c24!important}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#0b2119b8,#f4ecdcce 34%,#f4ecdcce 70%,#0b2119b8),url("./jharokha.jpg.jpeg") center/cover no-repeat}
+.section{background-image:linear-gradient(180deg,#fbf7edeb,#f3ead8e8),url("./jharokha.jpg.jpeg")!important;background-position:center,center!important;background-size:cover,cover!important;background-attachment:scroll,fixed!important}
+.section.story,.section.venue,.section.contact-rsvp{background-image:linear-gradient(180deg,#102b24eF,#0b211beF),url("./jharokha.jpg.jpeg")!important}
+.section.closing{background-image:linear-gradient(180deg,#f1e6d2eF,#e7d8beed),url("./jharokha.jpg.jpeg")!important}
+.hero{background-image:linear-gradient(180deg,#071c1755,#0a211b88),url("./jharokha.jpg.jpeg")!important;background-size:cover!important;background-position:center!important}
+.hero-nameplate{width:min(540px,92%);min-height:0;padding:clamp(28px,5vw,48px) 24px!important;margin:26px auto 22px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;overflow:visible}
+.hero-nameplate>*{position:relative;z-index:1;max-width:100%;overflow-wrap:anywhere}
+.hero-nameplate .nameplate-ornament{margin:0 0 12px!important;line-height:1.2}
+.hero-nameplate .family{margin:0 0 10px!important;line-height:1.5}
+.hero-nameplate .names{font-size:clamp(48px,8vw,76px)!important;line-height:1.12!important;display:block;margin:0!important;white-space:normal}
+.hero-nameplate .amp{line-height:1.15!important;margin:2px 0!important}
+.hero-nameplate .nameplate-rule{margin-top:13px!important;line-height:1.5;white-space:normal}
+.hero-line{max-width:600px;margin:0 auto;line-height:1.45!important;padding:0 8px}
+.hero-date{line-height:1.7!important}
+.heading,.body-copy,.kicker,.signature,.detail,.venue-panel,.guest-panel{overflow-wrap:anywhere;word-break:normal}
+.heading{line-height:1.12!important;margin:12px auto 18px!important}
+.body-copy{line-height:1.48!important}
+.signature{line-height:1.15!important}
+.section .wrap{min-width:0;width:100%}
+.guest-grid{align-items:stretch!important}
+.guest-panel{min-width:0!important;overflow:hidden!important}
+.guest-panel h3{line-height:1.2!important;margin:0 0 18px!important;overflow-wrap:normal}
+.guest-panel p,.guest-panel small,.guest-panel strong{line-height:1.5!important;overflow-wrap:anywhere}
+.guest-form{min-width:0!important}
+.guest-form input,.guest-form select,.guest-form textarea{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+.guest-form button{width:100%!important;white-space:normal!important;line-height:1.45!important;padding:13px 10px!important}
+.form-feedback{line-height:1.5!important;overflow-wrap:anywhere}
+.door-scene{transform:scale(1)!important;background:#160e0a;overflow:hidden}
+.door{background-size:200% 100%!important;background-repeat:no-repeat!important;background-position:center!important;box-shadow:inset 0 0 28px #0005!important}
+.door-left{background-position:left center!important}
+.door-right{background-position:right center!important}
+.door:before{inset:0!important;border:0!important}
+.door:after{font-size:22px!important;color:#d7b779!important}
+.loader.camera-push .door-scene{transform:scale(1.13)!important}
+.rope-pullers{z-index:8!important;pointer-events:none!important;opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.loader.drone-flight .rope-pullers{opacity:1;transform:translateY(0)}
+.pull-person{width:clamp(115px,17vw,220px)!important;height:44%!important;max-height:390px!important;bottom:2%!important;object-fit:contain!important;filter:drop-shadow(0 12px 15px #0008);transform-origin:50% 85%}
+.person-bride{left:3%!important;animation:bridePull 2.8s ease-in-out infinite!important}
+.person-groom{right:3%!important;animation:groomPull 2.8s ease-in-out infinite!important}
+.pull-rope-img.rope-pair{width:min(82vw,1000px)!important;height:46%!important;top:8%!important;object-fit:contain!important;transform-origin:center 20%;animation:ropeTension 2.8s ease-in-out infinite!important;filter:drop-shadow(0 8px 12px #0007)}
+@keyframes bridePull{0%,100%{transform:translate(0,0) rotate(0)}35%{transform:translate(-4px,-3px) rotate(-1.2deg)}55%{transform:translate(3px,1px) rotate(.7deg)}}
+@keyframes groomPull{0%,100%{transform:translate(0,0) rotate(0)}35%{transform:translate(4px,-3px) rotate(1.2deg)}55%{transform:translate(-3px,1px) rotate(-.7deg)}}
+@keyframes ropeTension{0%,100%{transform:scaleX(1) translateY(0)}38%{transform:scaleX(1.012) translateY(-3px)}58%{transform:scaleX(.995) translateY(1px)}}
+.scroll-invite{width:min(94vw,900px)!important;height:min(88svh,900px)!important;max-height:900px!important;overflow:visible!important;transform:translate(-50%,-50%) scaleY(.015)!important}
+.scroll-art{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 24px 32px #120b0680)!important}
+.welcome-quote{display:none!important}
+.scratch-box{width:250px!important;height:230px!important;max-width:78vw!important;margin:34px auto 18px!important;clip-path:polygon(50% 96%,42% 89%,26% 76%,12% 62%,4% 49%,0 36%,3% 23%,11% 13%,22% 8%,34% 10%,44% 18%,50% 26%,56% 18%,66% 10%,78% 8%,89% 13%,97% 23%,100% 36%,96% 49%,88% 62%,74% 76%,58% 89%)!important;border:0!important;background:#640d25!important;filter:drop-shadow(0 15px 24px #31071466)}
+.scratch-box:before{display:none!important;content:none!important}
+.scratch-copy{inset:0!important;padding:0 28px!important;justify-content:center!important;align-items:center!important;text-align:center!important;font:italic 25px/1.25 "Cormorant Garamond",serif!important;color:#fff0d7!important;text-shadow:0 2px 7px #300611!important}
+.scratch-copy small{font:9px/1.5 Manrope,sans-serif!important;letter-spacing:.12em!important;color:#f1d7a8!important;margin-top:8px!important}
+#scratch{inset:0!important;width:100%!important;height:100%!important;clip-path:inherit!important;border:0!important;z-index:2!important}
+.hint{line-height:1.5!important;margin:12px auto 0!important;max-width:260px}
+.portrait-card img{width:100%!important;height:auto!important;aspect-ratio:4/5!important;object-fit:contain!important;object-position:center center!important;background:#17392f!important}
+.portrait-card{overflow:hidden!important}
+.couple-frame img{display:block!important;width:100%!important;height:auto!important;max-height:680px!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center center!important;background:#102b24!important}
+.couple-frame{overflow:hidden!important}
+.venue-photo-frame img{object-fit:cover!important}
+@media(max-width:760px){
+ .hero{padding:58px 15px 54px!important;min-height:100svh}
+ .hero-nameplate{width:94%!important;padding:30px 15px!important;margin:20px auto!important}
+ .hero-nameplate .names{font-size:clamp(43px,12vw,62px)!important}
+ .hero-line{font-size:21px!important}
+ .section{padding:68px 16px!important}
+ .guest-grid{grid-template-columns:1fr!important;max-width:460px!important}
+ .guest-panel{padding:28px 20px!important}
+ .portrait-grid{grid-template-columns:1fr!important;max-width:390px!important}
+ .portrait-card img{aspect-ratio:auto!important;max-height:560px!important}
+ .couple-frame img{max-height:75vh!important}
+ .pull-person{width:31vw!important;height:34%!important;bottom:4%!important}
+ .pull-rope-img.rope-pair{width:94vw!important;height:39%!important;top:13%!important}
+ .scroll-invite{width:98vw!important;height:82svh!important}
+ .scratch-box{width:225px!important;height:207px!important}
+ .scratch-copy{font-size:22px!important}
+}
+@media(prefers-reduced-motion:reduce){.pull-person,.rope-pair{animation:none!important}.reveal{opacity:1!important;transform:none!important}}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
  <div class="door-scene" aria-hidden="true"><button class="door door-left" type="button" tabindex="-1" aria-label="Left door"></button><button class="door door-right" type="button" tabindex="-1" aria-label="Right door"></button></div><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-pair" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
- <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope%20(2).jpeg" alt=""><div class="welcome-quote"><span class="welcome-ornament">✧ ❧ ✧</span><p>With the blessings of Allah<br>and the love of our families,<br>we warmly welcome you<br>to celebrate a beautiful beginning.</p><small>— Sarah &amp; Maaz —</small></div></div>
+ <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope%20(2).jpeg" alt="Welcome parchment invitation"></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
