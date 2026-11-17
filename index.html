@@ -321,12 +321,50 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
  .portrait-card img{height:265px}
 }
 @media(prefers-reduced-motion:reduce){.puller{animation:none}}
+
+/* Real supplied parchment scroll + paired golden rope pull */
+.loader{background:#e6e4df!important;perspective:1400px}
+.loader:before,.loader:after{display:none!important}
+.door{z-index:8}
+.scroll-invite{position:absolute!important;left:50%!important;top:50%!important;width:min(440px,76vw)!important;height:min(78svh,720px)!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:hidden!important;transform:translate(-50%,-50%) scaleY(.015)!important;transform-origin:center!important;opacity:0!important;transition:transform 2.7s cubic-bezier(.2,.72,.18,1),opacity .65s ease!important}
+.scroll-art{display:block;width:100%;height:100%;object-fit:fill;filter:drop-shadow(0 18px 26px #3c2a1740)}
+.welcome-quote{position:absolute;left:19%;right:19%;top:24%;height:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#713e31;opacity:0;transform:translateY(12px);transition:opacity 1s ease .8s,transform 1s ease .8s}
+.welcome-quote p{font:italic clamp(17px,3.2vw,25px)/1.45 "Cormorant Garamond",serif;margin:10px 0;color:#713e31}
+.welcome-quote small{font:italic 15px "Cormorant Garamond",serif;letter-spacing:.08em;color:#8d4c3e}
+.welcome-ornament{font-size:18px;color:#a96a4e;letter-spacing:.3em}
+.loader.scroll-opening .scroll-invite{transform:translate(-50%,-50%) scaleY(1)!important;opacity:1!important}
+.loader.scroll-opening .welcome-quote{opacity:1;transform:none}
+.rope-pullers{position:absolute;inset:0;z-index:6;pointer-events:none;opacity:0;transition:opacity .6s ease}
+.pull-rope-img{position:absolute;top:24%;width:clamp(75px,15vw,145px);height:43%;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 5px 7px #5b421e55)}
+.rope-bride{left:1%;transform:rotate(-8deg);transform-origin:top center}
+.rope-groom{right:1%;transform:scaleX(-1) rotate(-8deg);transform-origin:top center}
+.rope-label{position:absolute;top:68%;font:9px Manrope,sans-serif;letter-spacing:.22em;color:#8d7047;text-shadow:0 1px 4px #fff}
+.rope-label-left{left:7%}.rope-label-right{right:7%}
+.loader.scroll-opening .rope-pullers{opacity:1}
+.loader.scroll-opening .rope-bride{animation:pullBride 2.4s ease-in-out both}
+.loader.scroll-opening .rope-groom{animation:pullGroom 2.4s ease-in-out both}
+@keyframes pullBride{0%{translate:0 0}35%{translate:-16px 8px}70%{translate:-28px 2px}100%{translate:-8px 0}}
+@keyframes pullGroom{0%{translate:0 0}35%{translate:16px 8px}70%{translate:28px 2px}100%{translate:8px 0}}
+.loader.scroll-fold .scroll-invite{transform:translate(-50%,-50%) scaleY(.015)!important;opacity:0!important;transition:transform 1.45s cubic-bezier(.65,0,.35,1),opacity .9s ease!important}
+.loader.scroll-fold .welcome-quote{opacity:0;transition:opacity .25s}
+.loader.scroll-fold .rope-pullers{opacity:0;transition:opacity .6s}
+.loader.floating .lantern{animation-play-state:running!important;opacity:.95}
+.loader .lantern{z-index:7;bottom:-110px;animation-play-state:paused}
+@media(max-width:600px){
+ .scroll-invite{width:min(94vw,410px)!important;height:min(75svh,650px)!important}
+ .welcome-quote{left:20%;right:20%;top:25%;height:47%}
+ .welcome-quote p{font-size:clamp(15px,4vw,21px)}
+ .pull-rope-img{width:22vw;top:27%;height:36%}
+ .rope-label{font-size:7px;top:65%}
+}
+@media(prefers-reduced-motion:reduce){.loader.scroll-opening .rope-bride,.loader.scroll-opening .rope-groom{animation:none}}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="scroll-pullers" aria-hidden="true"><div class="puller bride-puller"><i></i><b></b><span>BRIDE</span></div><div class="pull-rope rope-left"></div><div class="pull-rope rope-right"></div><div class="puller groom-puller"><i></i><b></b><span>GROOM</span></div></div>
- <div class="flight-route" aria-hidden="true"><span class="route-from">LONDON</span><svg viewBox="0 0 520 150" role="presentation"><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#e8d5a5" stroke-width="1.7" stroke-dasharray="5 8"/><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#fff4d6" stroke-width=".8" opacity=".7"/></svg><span class="route-plane">✈</span><span class="route-heart">♡</span><span class="route-to">ISLAMABAD</span></div><div class="scroll-invite"><div class="scroll-seal"><span class="initial">S</span><span class="seal-amp">&amp;</span><span class="initial">M</span></div><div class="scroll-title">Sarah <i>&amp;</i> Maaz</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
+ <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-bride" src="./rope-png.jpeg" alt=""><img class="pull-rope-img rope-groom" src="./rope-png.jpeg" alt=""><span class="rope-label rope-label-left">BRIDE</span><span class="rope-label rope-label-right">GROOM</span></div>
+ <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope.jpeg" alt=""><div class="welcome-quote"><span class="welcome-ornament">✧ ❧ ✧</span><p>Two hearts, one beautiful beginning.<br>With love, blessings and joy,<br>we welcome you to our celebration.</p><small>— Sarah &amp; Maaz —</small></div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
@@ -380,9 +418,10 @@ h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormor
   if(knocks>=2){
    doorsOpened=true;loader.classList.remove('knock-one','knock-two');loader.classList.add('opening');
    if(knockPrompt)knockPrompt.classList.add('hide');
-   window.setTimeout(()=>{loader.classList.add('floating','route-visible');},1550);
-   window.setTimeout(()=>loader.classList.add('card-reveal'),4300);
-   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},7600);
+   window.setTimeout(()=>loader.classList.add('scroll-opening'),1150);
+   window.setTimeout(()=>loader.classList.add('scroll-fold'),6500);
+   window.setTimeout(()=>{loader.classList.add('floating');},7950);
+   window.setTimeout(()=>{loader.classList.add('done');document.body.style.overflow='';window.scrollTo({top:0,left:0,behavior:'instant'});},11200);
   }else{
    knockReset=window.setTimeout(()=>{knocks=0;loader.classList.remove('knock-one','knock-two');if(knockPrompt)knockPrompt.querySelector('small').textContent='Tap the doors twice to knock';},2200);
   }
