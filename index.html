@@ -215,6 +215,28 @@ main{background:transparent}
 }
 @media(prefers-reduced-motion:reduce){.flight-route,.route-plane,.route-heart{animation:none!important}.door{transition-duration:.01ms}}
 
+
+/* HOORIQA.STUDIO moving signature strip */
+.brand-marquee{position:fixed;top:0;left:0;right:0;z-index:25;height:27px;overflow:hidden;background:linear-gradient(90deg,#071812,#244638,#071812);border-bottom:1px solid #b9975b;display:flex;align-items:center;color:#ead7a7}
+.brand-marquee-track{display:flex;align-items:center;gap:34px;width:max-content;white-space:nowrap;animation:brandSlide 28s linear infinite;font-size:9px;letter-spacing:.34em;font-weight:600}
+.brand-marquee-track span:after{content:"✧";margin-left:34px;color:#c5a56b}
+@keyframes brandSlide{to{transform:translateX(-50%)}}
+.hero{padding-top:125px}
+.contact-rsvp{background:rgba(248,243,231,.94)}
+.guest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:760px;margin:32px auto 0;text-align:left}
+.guest-panel{padding:25px;background:#fffaf0;border:1px solid #c5a56b;box-shadow:0 14px 35px #102b2412}
+.guest-panel h3{font:27px "Playfair Display",serif;color:#17392f;margin:0 0 12px}
+.guest-panel p{font:italic 18px "Cormorant Garamond",serif;color:#77796c}
+.demo-contact{padding:12px 0;border-top:1px solid #e4d7bc;font-size:13px;color:#34473b}
+.demo-contact small{display:block;margin-top:4px;color:#947443;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+.guest-form{display:grid;gap:11px;margin-top:15px}
+.guest-form label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#947443}
+.guest-form input,.guest-form select,.guest-form textarea{width:100%;padding:12px;border:1px solid #d6c7a8;background:#fffdf8;color:#24352e;font:14px Manrope,sans-serif;border-radius:0}
+.guest-form textarea{min-height:92px;resize:vertical}
+.guest-form button{padding:13px;border:1px solid #b9975b;background:#17392f;color:#f8e9c7;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.demo-note{font-size:10px!important;line-height:1.6;color:#8a7048!important;margin:12px 0 0!important}
+@media(max-width:650px){.brand-marquee{height:24px}.brand-marquee-track{font-size:8px;gap:24px}.brand-marquee-track span:after{margin-left:24px}.hero{padding-top:105px}.guest-grid{grid-template-columns:1fr}.guest-panel{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -223,6 +245,7 @@ main{background:transparent}
  <div class="flight-route" aria-hidden="true"><span class="route-from">LONDON</span><svg viewBox="0 0 520 150" role="presentation"><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#e8d5a5" stroke-width="1.7" stroke-dasharray="5 8"/><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#fff4d6" stroke-width=".8" opacity=".7"/></svg><span class="route-plane">✈</span><span class="route-heart">♡</span><span class="route-to">ISLAMABAD</span></div><div class="scroll-invite"><div class="scroll-seal">A <span>&amp;</span> M</div><div class="scroll-title">Areeqa <i>&amp;</i> Muneeb</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
+<div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
 <main>
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Play background music"><span class="music-icon" id="musicIcon">♫</span><span id="musicLabel">Play Music</span></button>
 <header class="hero">
@@ -243,6 +266,11 @@ main{background:transparent}
 <section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-marquee-islamabad-wedding-hall-1024x647.jpeg" alt="Majestic Marquee Islamabad wedding hall and stage" loading="lazy"></div><div class="photo-credit">Majestic Marquee · Islamabad</div></div></section>
 <section class="section details"><div class="wrap reveal"><div class="kicker">The celebration</div><h2 class="heading">The wedding day</h2><p class="body-copy">We would be honoured by your presence.</p><div class="detail-grid"><div class="detail"><small>Date</small><strong>04 January 2027</strong><p>Monday</p></div><div class="detail"><small>Time</small><strong>8:00 PM</strong><p>Evening celebration</p></div><div class="detail"><small>Occasion</small><strong>Wedding</strong><p>A celebration with family and friends</p></div></div></div></section>
 <section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
+<section class="section contact-rsvp"><div class="wrap reveal"><div class="kicker">Be part of our happiness</div><h2 class="heading">Kindly respond</h2><p class="body-copy">Your presence will make our celebration even more special.</p><div class="guest-grid">
+<div class="guest-panel"><h3>Get in touch</h3><p>For any event-related questions, please contact the families.</p><div class="demo-contact"><strong>Bride’s Family</strong><br>+92 300 000 0000<small>Demo number · replace before publishing</small></div><div class="demo-contact"><strong>Groom’s Family</strong><br>+92 300 000 0001<small>Demo number · replace before publishing</small></div><p class="demo-note">These are display-only placeholders. Call and WhatsApp links will be enabled after real contact numbers are provided.</p></div>
+<div class="guest-panel"><h3>Wedding RSVP</h3><form class="guest-form" id="rsvpForm"><label for="guestName">Your name</label><input id="guestName" name="name" required maxlength="60" placeholder="Enter your name"><label for="attendance">Will you attend?</label><select id="attendance" name="attendance" required><option value="">Choose one</option><option>Joyfully accepting</option><option>Regretfully declining</option></select><label for="guestCount">Number of guests</label><select id="guestCount" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select><button type="submit">Preview RSVP</button></form><p class="demo-note">Demo preview only — responses are not saved or sent yet.</p></div>
+<div class="guest-panel"><h3>Send your wishes</h3><form class="guest-form" id="wishForm"><label for="wishName">Your name</label><input id="wishName" name="name" required maxlength="60" placeholder="Your name"><label for="wishText">Your message</label><textarea id="wishText" name="wish" required maxlength="400" placeholder="Write a heartfelt wish for the couple…"></textarea><button type="submit">Preview wishes</button></form><p class="demo-note">Demo preview only — wishes will not appear publicly until a secure guestbook is connected.</p></div>
+</div></div></section>
 <section class="section closing"><div class="wrap reveal"><div class="kicker">With love and duas</div><h2 class="heading">Your presence is our blessing</h2><p class="quote">“And He placed between you affection and mercy.”<br><small>— Surah Ar-Rum 30:21</small></p><div class="ornament">✧ ❧ ✧</div><div class="signature">Areeqa &amp; Muneeb</div></div></section>
 <footer class="footer"><div class="brand">HOORIQA STUDIO</div><div class="footer-rule"></div><div class="tagline">Every Invitation Tells a Story.</div></footer>
 </main>
@@ -372,7 +400,11 @@ main{background:transparent}
   }
  }
  musicButton.addEventListener('click',toggleMusic);
- const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+ const rsvpForm=document.getElementById('rsvpForm'),wishForm=document.getElementById('wishForm');
+ if(rsvpForm)rsvpForm.addEventListener('submit',e=>{e.preventDefault();alert('RSVP preview received. This demo does not save or send responses yet.');});
+ if(wishForm)wishForm.addEventListener('submit',e=>{e.preventDefault();alert('Wishes preview received. Connect a guestbook service to save messages.');});
+\n const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 })();
 </script>
 </body></html>
