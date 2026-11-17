@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#102b24">
-<meta name="description" content="Areeqa and Muneeb's royal wedding invitation — 4 January 2027, Islamabad.">
-<title>Areeqa &amp; Muneeb — The Royal Invitation</title>
+<meta name="description" content="Sarah and Maaz's royal wedding invitation — 4 January 2027, Islamabad.">
+<title>Sarah &amp; Maaz — The Royal Invitation</title>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,12 +240,93 @@ main{background:transparent}
 .demo-note{font-size:10px!important;line-height:1.6;color:#8a7048!important;margin:12px 0 0!important}
 @media(max-width:650px){.brand-marquee{height:24px}.brand-marquee-track{font-size:8px;gap:24px}.brand-marquee-track span:after{margin-left:24px}.hero{padding-top:105px}.guest-grid{grid-template-columns:1fr}.guest-panel{padding:20px}}
 
+
+/* Sarah & Maaz — refined ivory, emerald and antique-gold finish */
+:root{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:#f4ecdc;color:#17392f}
+h1,h2,.heading,.names,.signature,.venue-name,.guest-panel h3{font-family:"Cormorant Garamond","Playfair Display",serif}
+.heading{color:#234438;text-shadow:0 2px 0 #fff8}
+.section{scroll-margin-top:18px}
+.reveal{transform:translateY(32px);transition:opacity .9s ease,transform 1.05s cubic-bezier(.2,.75,.2,1)}
+.reveal.visible{transform:translateY(0)}
+/* Circular monogram: separate initials, never cramped together */
+.scroll-seal{width:76px;height:76px;min-width:76px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1;background:radial-gradient(circle,#fff9e9 0 55%,#ead7ad 56% 100%);border:2px solid #aa8348;box-shadow:0 0 0 5px #fff5df,0 0 0 6px #b9975b;font-family:"Cormorant Garamond",serif}
+.scroll-seal .initial{font-size:21px;font-weight:600;line-height:.82;color:#234438}
+.scroll-seal .seal-amp{font-size:11px;line-height:1;color:#a47d43;margin:2px 0}
+/* Unfurling parchment instead of a square popup card */
+.scroll-invite{position:absolute;left:50%;top:50%;width:min(690px,86vw);min-height:290px;padding:48px 28px 38px;transform:translate(-50%,-50%) scaleY(.025);transform-origin:center;opacity:0;border:0;border-top:8px solid #a47b3f;border-bottom:8px solid #a47b3f;border-radius:3px;background:linear-gradient(90deg,#b18b4c,#f4e8c9 7%,#fff8e8 50%,#e6d3a9 93%,#a17a40);box-shadow:0 25px 75px #0009,inset 0 0 0 1px #fff8e6;transition:transform 2.2s cubic-bezier(.2,.7,.15,1),opacity .7s ease}
+.scroll-invite:before,.scroll-invite:after{content:"";position:absolute;left:-12px;right:-12px;height:15px;border-radius:10px;background:linear-gradient(180deg,#f5e6c3,#9d753d 45%,#e7d1a1 70%,#6e512e);box-shadow:0 5px 9px #0004}
+.scroll-invite:before{top:-12px}.scroll-invite:after{bottom:-12px}
+.loader.card-reveal .scroll-invite{transform:translate(-50%,-50%) scaleY(1);opacity:1}
+.scroll-title{font-family:"Bodoni Moda","Cormorant Garamond",serif;font-size:clamp(38px,6vw,58px);font-style:italic;color:#17392f;margin-top:10px}
+.scroll-sub{font-size:21px;color:#82643b}.scroll-date{font-size:11px;color:#8c6b3d}
+.scroll-pullers{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;transition:opacity .5s}
+.loader.opening .scroll-pullers,.loader.floating .scroll-pullers{opacity:1}
+.puller{position:absolute;bottom:13%;width:62px;height:115px;text-align:center;color:#f1dfb8;font:8px Manrope,sans-serif;letter-spacing:.16em;text-shadow:0 2px 8px #000}
+.puller i{position:absolute;top:0;left:23px;width:17px;height:17px;border-radius:50%;background:#d4ad82;box-shadow:0 0 0 4px #e9d2b044}
+.puller b{position:absolute;top:20px;left:13px;width:37px;height:68px;border-radius:45% 45% 8px 8px;background:linear-gradient(90deg,#6b2535,#a64d57,#5c1d2a);clip-path:polygon(25% 0,75% 0,100% 100%,0 100%)}
+.puller span{position:absolute;bottom:0;left:0;right:0}
+.bride-puller{left:4%;animation:pullTug 1.8s ease-in-out infinite}
+.groom-puller{right:4%;animation:pullTug 1.8s ease-in-out .3s infinite}
+.groom-puller b{background:linear-gradient(90deg,#d6c7a5,#f1e5cb,#8e754f)}
+.pull-rope{position:absolute;top:44%;width:17%;height:2px;background:repeating-linear-gradient(90deg,#d7bb7b 0 5px,#6b4a25 5px 8px);transform-origin:center;opacity:.8}
+.rope-left{left:10%;transform:rotate(-8deg)}.rope-right{right:10%;transform:rotate(8deg)}
+@keyframes pullTug{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+/* More visible lanterns, beginning higher and floating naturally */
+.loader.floating .lantern{opacity:.95;animation-duration:18s!important}
+.lantern{filter:drop-shadow(0 0 15px #f6d58a);will-change:transform}
+@keyframes rise{0%{transform:translate3d(0,0,0) rotate(-3deg);bottom:-60px;opacity:0}8%{opacity:.95}55%{transform:translate3d(var(--sway,18px),-58vh,0) rotate(3deg)}100%{transform:translate3d(calc(var(--sway,18px)*-1),-145vh,0) rotate(-4deg);opacity:0}}
+/* Calendar as part of the same flowing invitation */
+.mini-calendar{max-width:540px;margin:24px auto 4px;padding:20px 18px 14px;background:linear-gradient(145deg,#fffaf0,#eee1c5);border:1px solid #b9975b;box-shadow:0 15px 38px #102b2412}
+.mini-calendar-head,.mini-calendar-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center;gap:5px}
+.mini-calendar-head{padding-bottom:12px;border-bottom:1px solid #c8ad7d;color:#947344;font:8px Manrope,sans-serif;letter-spacing:.08em}
+.mini-calendar-days{padding-top:10px}
+.mini-calendar-days>span,.mini-calendar-days>i{min-height:34px;display:grid;place-items:center;font:15px "Cormorant Garamond",serif;color:#294b3d}
+.mini-calendar-days>i{font-style:normal}
+.mini-calendar-days .wedding-day{position:relative;margin:1px;border-radius:50%;background:#1d4939;color:#fff2d4;box-shadow:0 0 0 3px #d4b77e;font-weight:700}
+.wedding-day small{position:absolute;right:1px;top:-5px;color:#b98b4d;font-size:10px}
+.calendar-caption{margin:14px 0 0;color:#8d6c3d;font:italic 17px "Cormorant Garamond",serif}
+/* Map, RSVP, wishes and contact as cohesive invitation panels */
+.map-preview{height:220px;margin:22px auto 18px;max-width:650px;overflow:hidden;border:1px solid #c7a76c;box-shadow:0 12px 32px #071b1722}
+.map-preview iframe{width:100%;height:100%;border:0;filter:sepia(.13) saturate(.82)}
+.guest-grid{gap:18px;align-items:stretch}
+.guest-panel{padding:28px 24px;background:linear-gradient(145deg,#fffaf0,#eee2c9);border:1px solid #c4a66e;box-shadow:0 18px 40px #142d2410;position:relative;overflow:hidden}
+.guest-panel:before{content:"";position:absolute;inset:8px;border:1px solid #c4a66e66;pointer-events:none}
+.guest-panel h3{font-size:30px;color:#214536;position:relative}
+.guest-panel p,.guest-panel form{position:relative}
+.contact-person{display:flex;align-items:center;gap:14px;padding:15px 4px;border-bottom:1px solid #d8c49d}
+.contact-monogram{width:43px;height:43px;flex:0 0 43px;border:1px solid #b9975b;border-radius:50%;display:grid;place-items:center;color:#254737;font:italic 22px "Cormorant Garamond",serif;background:#f8efd9}
+.contact-person strong,.contact-person small{display:block;color:#254737}
+.contact-person small{margin-top:4px;color:#8c744f;font:12px "Manrope",sans-serif}
+.guest-form{gap:9px}
+.guest-form label{font:10px Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#80633b}
+.guest-form input,.guest-form select,.guest-form textarea{width:100%;border:1px solid #c8b184;background:#fffdf7;color:#1c3d31;padding:13px 14px;border-radius:2px;font:14px Manrope,sans-serif;outline:none}
+.guest-form input:focus,.guest-form select:focus,.guest-form textarea:focus{border-color:#94713d;box-shadow:0 0 0 3px #b9975b25}
+.guest-form button{border:1px solid #b9975b;background:linear-gradient(120deg,#17392f,#285644);color:#fff3d7;padding:14px 20px;font:10px Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:transform .25s,box-shadow .25s}
+.guest-form button:hover{transform:translateY(-2px);box-shadow:0 9px 20px #17392f30}
+.demo-note{color:#8b7656;font-size:10px;line-height:1.6}
+@media(max-width:600px){
+ .scroll-invite{width:88vw;min-height:260px;padding:42px 14px 30px}
+ .scroll-seal{width:66px;height:66px;min-width:66px}
+ .scroll-pullers{display:none}
+ .mini-calendar{padding:16px 9px}
+ .mini-calendar-head{font-size:6px;letter-spacing:0}
+ .mini-calendar-days{gap:2px}
+ .mini-calendar-days>span,.mini-calendar-days>i{min-height:31px;font-size:13px}
+ .map-preview{height:185px}
+ .guest-grid{grid-template-columns:1fr}
+ .guest-panel{padding:23px 18px}
+ .portrait-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .portrait-card{padding:6px}
+ .portrait-card img{height:265px}
+}
+@media(prefers-reduced-motion:reduce){.puller{animation:none}}
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div>
- <div class="flight-route" aria-hidden="true"><span class="route-from">LONDON</span><svg viewBox="0 0 520 150" role="presentation"><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#e8d5a5" stroke-width="1.7" stroke-dasharray="5 8"/><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#fff4d6" stroke-width=".8" opacity=".7"/></svg><span class="route-plane">✈</span><span class="route-heart">♡</span><span class="route-to">ISLAMABAD</span></div><div class="scroll-invite"><div class="scroll-seal">A <span>&amp;</span> M</div><div class="scroll-title">Areeqa <i>&amp;</i> Muneeb</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
+ <button class="door door-left" type="button" aria-label="Knock on the left door"></button><button class="door door-right" type="button" aria-label="Knock on the right door"></button><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="scroll-pullers" aria-hidden="true"><div class="puller bride-puller"><i></i><b></b><span>BRIDE</span></div><div class="pull-rope rope-left"></div><div class="pull-rope rope-right"></div><div class="puller groom-puller"><i></i><b></b><span>GROOM</span></div></div>
+ <div class="flight-route" aria-hidden="true"><span class="route-from">LONDON</span><svg viewBox="0 0 520 150" role="presentation"><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#e8d5a5" stroke-width="1.7" stroke-dasharray="5 8"/><path d="M18 112 C145 8 300 8 495 88" fill="none" stroke="#fff4d6" stroke-width=".8" opacity=".7"/></svg><span class="route-plane">✈</span><span class="route-heart">♡</span><span class="route-to">ISLAMABAD</span></div><div class="scroll-invite"><div class="scroll-seal"><span class="initial">S</span><span class="seal-amp">&amp;</span><span class="initial">M</span></div><div class="scroll-title">Sarah <i>&amp;</i> Maaz</div><div class="scroll-sub">A royal invitation</div><div class="scroll-date">04 · 01 · 2027</div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
@@ -254,28 +335,28 @@ main{background:transparent}
 <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Play background music"><span class="music-icon" id="musicIcon">♫</span><span id="musicLabel">Play Music</span></button>
 <header class="hero">
  <div class="hero-content"><div class="hero-kicker">With the blessings of Allah and our families</div>
-  <div class="arch"><div class="arch-inner"><div class="arch-ornament">✧ ❧ ✧</div><div class="family">Together with their families</div><div class="names">Areeqa</div><div class="amp">&amp;</div><div class="names">Muneeb</div></div></div>
+  <div class="arch"><div class="arch-inner"><div class="arch-ornament">✧ ❧ ✧</div><div class="family">Together with their families</div><div class="names">Sarah</div><div class="amp">&amp;</div><div class="names">Maaz</div></div></div>
   <div class="hero-line">Invite you to witness the beginning of forever</div><div class="hero-date">Monday · 04 January 2027 · Islamabad</div><div class="scroll-cue">Scroll to discover <span>⌄</span></div>
  </div>
 </header>
-<section class="section intro"><div class="wrap reveal"><div class="kicker">A moment made meaningful</div><h2 class="heading">A beautiful beginning</h2><div class="ornament">✧ ❧ ✧</div><p class="body-copy">Two hearts, two families, and one beautiful journey. With grateful hearts and the blessings of Allah, we invite you to join us as Areeqa and Muneeb begin their new chapter together.</p><div class="signature">Areeqa &amp; Muneeb</div><p class="body-copy" style="font-size:20px">May this union be filled with love, mercy, understanding and endless barakah.</p></div></section>
+<section class="section intro"><div class="wrap reveal"><div class="kicker">A moment made meaningful</div><h2 class="heading">A beautiful beginning</h2><div class="ornament">✧ ❧ ✧</div><p class="body-copy">Two hearts, two families, and one beautiful journey. With grateful hearts and the blessings of Allah, we invite you to join us as Sarah and Maaz begin their new chapter together.</p><div class="signature">Sarah &amp; Maaz</div><p class="body-copy" style="font-size:20px">May this union be filled with love, mercy, understanding and endless barakah.</p></div></section>
 <section class="section save"><div class="wrap reveal"><div class="kicker">Keep this day close</div><h2 class="heading">Save the date</h2><div class="ornament">✧ ❧ ✧</div><div class="save-card">
  <div class="save-label">PLEASE JOIN US</div><div class="date-big">04</div><div class="date-month">Monday · January · 2027</div>
- <a class="calendar-link" href="./calendar.html">✧ &nbsp; View Wedding Calendar &nbsp; ✧</a>
+ <div class="calendar-link" aria-label="Wedding calendar">✧ &nbsp; JANUARY 2027 · SAVE OUR DATE &nbsp; ✧</div><div class="mini-calendar"><div class="mini-calendar-head"><span>MONDAY</span><span>TUESDAY</span><span>WEDNESDAY</span><span>THURSDAY</span><span>FRIDAY</span><span>SATURDAY</span><span>SUNDAY</span></div><div class="mini-calendar-days"><i></i><i></i><i></i><i></i><span>1</span><span>2</span><span>3</span><span class="wedding-day">4<small>♥</small></span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div><p class="calendar-caption">Monday · 04 January · 8:00 PM</p></div>
  <div class="countdown" id="countdown"><div class="timebox"><strong>--</strong><span>Days</span></div><div class="timebox"><strong>--</strong><span>Hours</span></div><div class="timebox"><strong>--</strong><span>Minutes</span></div><div class="timebox"><strong>--</strong><span>Seconds</span></div></div>
  <div class="scratch-box"><div class="scratch-copy">04 January 2027<small>Monday · 8:00 PM · Islamabad</small></div><canvas id="scratch"></canvas></div><div class="hint">Gently scratch the gold to reveal the date</div>
  <div class="reveal-modal" id="revealModal" aria-hidden="true"><div class="glitter-layer" id="glitterLayer"></div><div class="reveal-dialog"><div class="reveal-star">✧</div><div class="reveal-kicker">The day is revealed</div><div class="reveal-date">04 January 2027</div><div class="reveal-place">Monday · Islamabad · 8:00 PM</div><button class="modal-close" id="closeReveal">Continue</button></div></div>
  </div></div></section>
-<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional South Asian wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Illustrative Pakistani bride in a traditional maroon bridal lehenga" style="object-position:78% center" loading="lazy"><figcaption><span>The Bride</span><small>Bridal portrait</small></figcaption></figure><figure class="portrait-card"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Illustrative Pakistani groom in an ivory sherwani" style="object-position:24% center" loading="lazy"><figcaption><span>The Groom</span><small>Groom portrait</small></figcaption></figure></div><div class="couple-frame"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Matching Pakistani bridal couple portrait" loading="lazy"><div class="couple-caption">Areeqa <i>&amp;</i> Muneeb</div></div><p class="portrait-note">One consistent Pakistani wedding couple portrait is used across all three frames as a visual reference.</p></div></section>
+<section class="section portraits"><div class="wrap reveal"><div class="kicker">A celebration of two families</div><h2 class="heading">The wedding portraits</h2><p class="body-copy">A traditional South Asian wedding, framed in timeless elegance.</p><div class="portrait-grid"><figure class="portrait-card"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Illustrative Pakistani bride in a traditional maroon bridal lehenga" style="object-position:78% center" loading="lazy"><figcaption><span>The Bride</span><small>Bridal portrait</small></figcaption></figure><figure class="portrait-card"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Illustrative Pakistani groom in an ivory sherwani" style="object-position:24% center" loading="lazy"><figcaption><span>The Groom</span><small>Groom portrait</small></figcaption></figure></div><div class="couple-frame"><img src="https://www.sassybrides.pk/cdn/shop/files/anasshaheenfilms_1735669136_3535371412122619367_13939222602.jpg?v=1764484401" alt="Matching Pakistani bridal couple portrait" loading="lazy"><div class="couple-caption">Sarah <i>&amp;</i> Maaz</div></div><p class="portrait-note">One consistent Pakistani wedding couple portrait is used across all three frames as a visual reference.</p></div></section>
 <section class="section story"><div class="wrap reveal"><div class="kicker">A glimpse of the celebration</div><h2 class="heading">A royal affair</h2><p class="body-copy">An evening of timeless traditions, graceful moments and memories to treasure.</p><div class="story-frame"><img src="https://majesticmarqueeislamabad.com/wp-content/uploads/2025/12/majestic-marquee-islamabad-wedding-hall-1024x647.jpeg" alt="Majestic Marquee Islamabad wedding hall and stage" loading="lazy"></div><div class="photo-credit">Majestic Marquee · Islamabad</div></div></section>
 <section class="section details"><div class="wrap reveal"><div class="kicker">The celebration</div><h2 class="heading">The wedding day</h2><p class="body-copy">We would be honoured by your presence.</p><div class="detail-grid"><div class="detail"><small>Date</small><strong>04 January 2027</strong><p>Monday</p></div><div class="detail"><small>Time</small><strong>8:00 PM</strong><p>Evening celebration</p></div><div class="detail"><small>Occasion</small><strong>Wedding</strong><p>A celebration with family and friends</p></div></div></div></section>
-<section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
+<section class="section venue"><div class="wrap reveal"><div class="kicker">The gathering place</div><h2 class="heading">Islamabad</h2><p class="body-copy">We look forward to welcoming you at our celebration venue.</p><div class="venue-panel"><div class="venue-name">Majestic Marquee</div><p class="venue-address">2-A Club Road, near Rawal Dam Chowk, Shakar Parian, Islamabad, 44000</p><div class="map-preview"><iframe title="Majestic Marquee Islamabad map" src="https://maps.google.com/maps?q=Majestic%20Marquee%2C%20Islamabad&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div><a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Majestic+Marquee%2C+2-A+Club+Rd%2C+Shakar+Parian%2C+Islamabad" target="_blank" rel="noopener">Open Google Maps ↗</a></div></div></section>
 <section class="section contact-rsvp"><div class="wrap reveal"><div class="kicker">Be part of our happiness</div><h2 class="heading">Kindly respond</h2><p class="body-copy">Your presence will make our celebration even more special.</p><div class="guest-grid">
-<div class="guest-panel"><h3>Get in touch</h3><p>For any event-related questions, please contact the families.</p><div class="demo-contact"><strong>Bride’s Family</strong><br>+92 300 000 0000<small>Demo number · replace before publishing</small></div><div class="demo-contact"><strong>Groom’s Family</strong><br>+92 300 000 0001<small>Demo number · replace before publishing</small></div><p class="demo-note">These are display-only placeholders. Call and WhatsApp links will be enabled after real contact numbers are provided.</p></div>
+<div class="guest-panel"><h3>Get in touch</h3><p>For any event-related questions, please contact the families.</p><div class="contact-person"><span class="contact-monogram">S</span><div><strong>Bride’s Family</strong><small>Contact details to be shared by the family</small></div></div><div class="contact-person"><span class="contact-monogram">M</span><div><strong>Groom’s Family</strong><small>Contact details to be shared by the family</small></div></div><p class="demo-note">For event enquiries, please reach out to the hosts directly.</p></div>
 <div class="guest-panel"><h3>Wedding RSVP</h3><form class="guest-form" id="rsvpForm"><label for="guestName">Your name</label><input id="guestName" name="name" required maxlength="60" placeholder="Enter your name"><label for="attendance">Will you attend?</label><select id="attendance" name="attendance" required><option value="">Choose one</option><option>Joyfully accepting</option><option>Regretfully declining</option></select><label for="guestCount">Number of guests</label><select id="guestCount" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select><button type="submit">Preview RSVP</button></form><p class="demo-note">Demo preview only — responses are not saved or sent yet.</p></div>
 <div class="guest-panel"><h3>Send your wishes</h3><form class="guest-form" id="wishForm"><label for="wishName">Your name</label><input id="wishName" name="name" required maxlength="60" placeholder="Your name"><label for="wishText">Your message</label><textarea id="wishText" name="wish" required maxlength="400" placeholder="Write a heartfelt wish for the couple…"></textarea><button type="submit">Preview wishes</button></form><p class="demo-note">Demo preview only — wishes will not appear publicly until a secure guestbook is connected.</p></div>
 </div></div></section>
-<section class="section closing"><div class="wrap reveal"><div class="kicker">With love and duas</div><h2 class="heading">Your presence is our blessing</h2><p class="quote">“And He placed between you affection and mercy.”<br><small>— Surah Ar-Rum 30:21</small></p><div class="ornament">✧ ❧ ✧</div><div class="signature">Areeqa &amp; Muneeb</div></div></section>
+<section class="section closing"><div class="wrap reveal"><div class="kicker">With love and duas</div><h2 class="heading">Your presence is our blessing</h2><p class="quote">“And He placed between you affection and mercy.”<br><small>— Surah Ar-Rum 30:21</small></p><div class="ornament">✧ ❧ ✧</div><div class="signature">Sarah &amp; Maaz</div></div></section>
 <footer class="footer"><div class="brand">HOORIQA STUDIO</div><div class="footer-rule"></div><div class="tagline">Every Invitation Tells a Story.</div></footer>
 </main>
 <script>
