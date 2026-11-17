@@ -669,12 +669,75 @@ body.jump-moment .site-couple-anim img{animation:coupleJump .82s cubic-bezier(.2
 }
 @media(prefers-reduced-motion:reduce){.site-lantern-layer .site-lantern,.site-couple-anim img{animation:none!important}}
 
+
+/* HOORIQA premium final correction: new scroll artwork, readable welcome copy, stable layout */
+.scroll-invite{
+ position:absolute!important;left:50%!important;top:50%!important;z-index:10!important;
+ width:min(94vw,820px)!important;height:min(88svh,900px)!important;max-height:900px!important;
+ padding:0!important;margin:0!important;border:0!important;background:transparent!important;
+ box-shadow:none!important;overflow:visible!important;
+ transform:translate(-50%,-50%) scaleY(.015)!important;transform-origin:center!important;
+ opacity:0!important;transition:transform 2.25s cubic-bezier(.18,.75,.2,1),opacity .8s ease!important;
+}
+.scroll-art{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;filter:drop-shadow(0 22px 32px #120b0680)!important}
+.welcome-quote{
+ position:absolute!important;left:25%!important;right:25%!important;top:28%!important;height:45%!important;
+ display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+ gap:clamp(5px,1.1vh,12px)!important;text-align:center!important;color:#593820!important;
+ opacity:0!important;transform:translateY(12px)!important;
+ transition:opacity .9s ease .65s,transform .9s ease .65s!important;
+ padding:clamp(5px,1.2vw,14px)!important;pointer-events:none!important;
+}
+.welcome-quote p{margin:4px 0!important;max-width:100%!important;font:italic clamp(17px,2.6vw,27px)/1.25 "Cormorant Garamond",serif!important;color:#593820!important;text-shadow:0 1px 0 #fff8e8!important;overflow-wrap:normal!important}
+.welcome-quote strong{display:block;font:clamp(28px,5vw,48px)/1.05 "Italianno",cursive!important;color:#64172c!important;white-space:nowrap!important}
+.welcome-quote strong i{font:italic .55em "Cormorant Garamond",serif!important;color:#a47b42!important}
+.welcome-quote small{font:600 clamp(7px,1vw,10px)/1.4 Manrope,sans-serif!important;letter-spacing:.12em!important;color:#89663d!important}
+.welcome-ornament{font:clamp(10px,1.5vw,15px)/1.4 "Cormorant Garamond",serif!important;color:#a47b42!important;letter-spacing:.18em!important}
+.loader.scroll-opening .scroll-invite{transform:translate(-50%,-50%) scaleY(1)!important;opacity:1!important}
+.loader.scroll-opening .welcome-quote{opacity:1!important;transform:translateY(0)!important}
+.loader.scroll-fold .scroll-invite{transform:translate(-50%,-50%) scaleY(.025)!important;opacity:0!important;transition:transform 1.35s cubic-bezier(.65,0,.35,1),opacity .75s ease!important}
+.loader.scroll-fold .welcome-quote{opacity:0!important}
+.loader .rope-pullers .pull-person{z-index:3!important}
+.loader .rope-pullers{z-index:8!important}
+.heading{font-size:clamp(38px,6.5vw,64px)!important;line-height:1.16!important;letter-spacing:0!important;max-width:100%!important;text-wrap:balance}
+.body-copy{font-size:clamp(19px,2.6vw,24px)!important;line-height:1.55!important;max-width:660px!important;text-wrap:pretty}
+.kicker{line-height:1.7!important;letter-spacing:.2em!important;overflow-wrap:anywhere}
+.signature{line-height:1.2!important}
+.section .wrap{max-width:920px!important}
+.detail-grid{align-items:stretch!important}
+.detail{min-width:0!important}
+.detail strong{font-size:clamp(19px,2.4vw,25px)!important;line-height:1.25!important;overflow-wrap:anywhere}
+.venue-name{font-size:clamp(23px,4vw,30px)!important;line-height:1.3!important;overflow-wrap:anywhere}
+.venue-address{line-height:1.55!important;overflow-wrap:anywhere}
+.guest-panel h3{font-size:clamp(25px,3vw,30px)!important;line-height:1.25!important}
+.guest-panel p{line-height:1.55!important}
+.portrait-card img{object-fit:contain!important;object-position:center!important}
+@media(max-width:600px){
+ .scroll-invite{width:100vw!important;height:84svh!important;max-height:none!important}
+ .welcome-quote{left:25%!important;right:25%!important;top:29%!important;height:42%!important;gap:5px!important;padding:3px!important}
+ .welcome-quote p{font-size:clamp(14px,3.9vw,19px)!important;line-height:1.2!important}
+ .welcome-quote strong{font-size:clamp(24px,7vw,36px)!important}
+ .welcome-quote small{font-size:7px!important;letter-spacing:.08em!important}
+ .welcome-ornament{font-size:10px!important}
+ .heading{font-size:clamp(36px,10vw,49px)!important;line-height:1.12!important;margin:10px auto 15px!important}
+ .body-copy{font-size:19px!important;line-height:1.48!important}
+ .section{padding:62px 17px!important}
+ .detail-grid{grid-template-columns:1fr!important;gap:12px!important}
+ .detail{padding:18px 12px!important}
+ .guest-grid{grid-template-columns:minmax(0,1fr)!important}
+ .guest-panel{padding:25px 18px!important}
+ .portrait-grid{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .scroll-invite,.welcome-quote{transition:none!important}
+}
+
 </style>
 </head>
 <body>
 <div class="loader" id="loader" aria-label="Opening wedding invitation">
- <div class="door-scene" aria-hidden="true"><button class="door door-left" type="button" tabindex="-1" aria-label="Left door"></button><button class="door door-right" type="button" tabindex="-1" aria-label="Right door"></button></div><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-rope-img rope-pair" src="./rope-png.jpeg" alt=""><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
- <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope%20(2).jpeg" alt="Welcome parchment invitation"></div>
+ <div class="door-scene" aria-hidden="true"><button class="door door-left" type="button" tabindex="-1" aria-label="Left door"></button><button class="door door-right" type="button" tabindex="-1" aria-label="Right door"></button></div><div class="knock-prompt" id="knockPrompt"><span class="knock-icon">✧</span><strong>Before the celebration begins</strong><small>Tap the doors twice to knock</small><span class="knock-hint">TAP TO KNOCK · 2 TIMES</span></div><div class="rope-pullers" aria-hidden="true"><img class="pull-person person-bride" src="./bride-pulling-rope.png.png" alt=""><img class="pull-person person-groom" src="./groom-pulling-rope.png.png" alt=""></div>
+ <div class="scroll-invite" aria-label="Welcome scroll"><img class="scroll-art" src="./opening%20scroll%20with%20rope.png" alt="Traditional wedding welcome scroll"><div class="welcome-quote"><div class="welcome-ornament">✧ ❧ ✧</div><small>WITH THE BLESSINGS OF ALLAH</small><p>Two hearts, two families,<br>one beautiful beginning.</p><strong>Sarah <i>&amp;</i> Maaz</strong><small>REQUEST THE HONOUR OF YOUR PRESENCE</small><div class="welcome-ornament">04 JANUARY 2027 · LAHORE</div></div></div>
  <i class="lantern l1"></i><i class="lantern l2"></i><i class="lantern l3"></i><i class="lantern l4"></i>
 </div>
 <div class="brand-marquee" aria-label="HOORIQA Studio"><div class="brand-marquee-track"><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span><span>HOORIQA.STUDIO · EVERY INVITATION TELLS A STORY</span></div></div>
